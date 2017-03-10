@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code</title>
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/workshop/favicon.ico">
+
+  <!-- S'occupe des préfixes CSS -->
+  <script src="framework/scripts/prefixfree.min.js"></script>  
+  <!-- Ouvre tous les liens dans une nouvelle fenêtre -->
+  <base target="_blank">
+</head>
+
+<!-- Minuterie / barre de progression : Définissez la durée de la présentation en minutes à l'aide de « data-duration ». -->
+<body class="en" data-duration="360">
+  <main>
+    <section class="slide welcome highlight">
+      <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Bienvenue!</h1>
+      
+      <div class="instructions">
+        <!-- AJOUTEZ LES INFORMATIONS À PROPOS DU WI-FI -->
+        <!-- <h2>Branchez-vous</h2>
+        <p><strong>Wi-Fi :</strong> réseau wi-fi</p>
+        <p><strong>Mot de passe :</strong> mot de passe wi-fi</p>
+        <hr> -->
+        
+        <h2>Téléchargez<br> et installez</h2>
+        <ol class="downloads">
+          <li>Fichiers de l'apprenant (dossier zip): <a href="https://github.com/ladieslearningcode/llc-intro-to-javascript/archive/master.zip">http://bit.ly/1oNRFA2</a>
+            <ul>
+              <li>dézippez le dossier de l'apprenant (<em>Extraire tout</em> si vous utilisez Windows)</li>
+              <li>Ouvrez <em>slides_fr.html</em> dans le navigateur pour afficher les diapositives</li>
+            </ul>
+          </li>
+          <li>Éditeur Atom : <a href="http://atom.io">http://atom.io</a></li>
+          <li>Navigateur Chrome: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a></li>
+          </li>
+        </ol>
+      </div>
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Contenu par <a href="http://medium.com/@pearlchen">Pearl Chen</a> et <a href="http://christinatruong.com">Christina Truong</a> pour <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Utilisez la flèche gauche <span class="arrow">&#8592;</span> ou droite <span class="arrow">&#8594;</span> pour naviguer</p>
+      </footer>
+    </section> 
+
+    <section class="slide intro">
+      <img class="logo" src="framework/img/llc-logo-white.png" alt="logo Ladies Learning Code">
+      <h1 class="heading-bg">
+        <span>Introduction au<br>
+        JavaScript</span>
+      </h1>
+      
+      <!-- AJOUTEZ LES INFORMATIONS À PROPOS DU FORMATEUR -->
+      <!-- <img class="instructor" src="http://placehold.it/225x225" alt="Nom du formateur">
+      <h2><span class="cursive">avec</span> Nom du formateur</h2>  
+      <ul>
+        <li><a href="mailto:">allo@courriel.com</a></li>
+        <li><a href="http://monsite.com">monsite.com</a></li>
+        <li><a href="http://twitter.com/">@twitter</a></li>
+      </ul> -->
+      
+      <div class="sponsor">
+        <p>En collaboration avec <br> <img src="framework/img/telus-logo-white.svg" alt="Telus"></p>
+      </div>
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Contenu par <a href="http://medium.com/@pearlchen">Pearl Chen</a> et <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Utilisez la flèche gauche <span class="arrow">&#8592;</span> ou droite <span class="arrow">&#8594;</span> pour naviguer</p>
+      </footer>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Plan de cours
+        
+        <div class="table-of-contents"></div> 
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        # Première partie
+        ## Aperçu de la technologie,<br> Fonctions, Variables, Objets
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        # Environnement de développement
+        ## Outils nécessaires pour commencer
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Navigateur Web
+
+        Choisissez un navigateur Web moderne ayant de bons outils de développement intégrés pour construire des pages facilement. Aujourd'hui, nous utiliserons [Google Chrome](https://www.google.com/chrome).
+
+        [![Chrome](framework/img/workshop/new-chrome-logo.png)](https://www.google.com/chrome/browser/)
+
+        ---
+        ###Ressource :
+        Pour plus d'informations à propos des navigateurs : http://browsehappy.com
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Éditeur de code
+
+        Il y a de nombreuses options gratuites et payantes. Dans cet atelier, nous utiliserons [Atom](https://atom.io/). Si vous ne pouvez pas télécharger Atom, vous pouvez aussi utiliser [Brackets](http://brackets.io/).
+        
+        [![Logo d'Atom](framework/img/workshop/atom-logo.png)](https://atom.io/)
+        [![Logo de Brackets](framework/img/workshop/brackets-logo.png)](http://brackets.io/)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Modifier les fichiers du projet
+
+        À l'intérieur du dossier zip que vous avez téléchargé aujourd'hui, il y a beaucoup de dossiers avec des fichiers différents.
+        
+        ```xml
+        llc-intro-to-javascript-master-fr
+          |-- framework // Contient les fichiers pour les diapositives que vous voyez. Ne modifiez rien!
+          |-- exercises // Contient les exercices pour cet atelier.
+          |-- slides_fr.html // Le fichier que vous lisez en ce moment!
+        ```
+
+        Ouvrez le dossier **exercises** dans l'éditeur de texte pour accéder aux fichiers.  
+        Allez dans **File** > ** Add Project Folder**. Une fenêtre apparaîtra.
+        
+        ![](framework/img/workshop/editor-add-project-1.jpg)
+        
+        * Ensuite, naviguez jusqu'au dossier **llc-intro-to-javascript-master-fr**
+        * Sélectionnez le dossier **exercises** et cliquez sur **Open**
+        
+        Le dossier apparaîtra maintenant dans la barre latérale. Cliquez sur l'icône de flèche pour voir les fichiers qu'il contient.
+      </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #À la découverte d'Atom
+        
+        L'utilisation d'un bon éditeur de texte et l'apprentissage de ses fonctions rendront votre tâche beaucoup plus agréable. Tout d'abord, mettons à jour l'option d'habillage de texte (soft wrap) pour nous permettre de mieux lire les longs blocs de code et de texte.
+      
+        Allez dans **Preferences** pour ouvrir les options de personnalisation.
+
+        ![](framework/img/workshop/atom-preferences.jpg)<!-- .element: width="70%" -->
+
+        L'onglet **Settings** (paramètres) s'affiche par défaut. Descendez pour voir l'option d'habillage de texte **Soft Wrap**.
+
+        ![](framework/img/workshop/atom-settings.jpg)<!-- .element: width="70%" -->
+          
+        Assurez-vous que la case **Soft Wrap** est cochée.
+        
+        ![](framework/img/workshop/atom-soft-wrap.jpg)<!-- .element: width="70%" -->
+        
+       ---
+        ###Ressources (en anglais)
+
+        *   [Documentation d'Atom](https://atom.io/docs)
+        *   [Raccourcis Atom](https://bugsnag.com/blog/atom-editor-cheat-sheet)
+        *   [Personnalisation d'Atom](https://atom.io/docs/v0.61.0/customizing-atom)
+        *   [Thèmes](https://atom.io/themes) pour Atom
+        *   [Extraits](https://github.com/atom/snippets) - Créez vos propres extraits de code à réutiliser
+      </script>
+    </section>
+
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        # Aperçu de la technologie
+        ## La programmation et le JavaScript
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Qu'est-ce que le JavaScript?
+        
+        C'est un langage de programmation.<!-- .element: class="delayed" -->
+        
+        Un programme est un ensemble de directives à faire exécuter par un ordinateur.  Les ordinateurs sont rapides, mais aveugles.<br><br><!-- .element: class="delayed" -->
+        ![rawbot computers](framework/img/workshop/rawbot-computers.png)<!-- .element: style="height:45vh;" -->
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Parlez la langue des ordinateurs
+
+        La programmation est l'équivalent d'une conversation avec un ordinateur. Comme le français et les autres langues humaines, les langages de programmation ont des « règles de grammaire » que l'on appelle la *syntaxe*.
+        
+        Depuis l'époque du binaire, les ordinateurs ont beaucoup évolué. Nous les rejoignons à la moitié de leur parcours.
+
+        ![computer binary](framework/img/workshop/rawbot-binary.png) <!-- .element: style="height:30vh;" -->
+      </script>
+    </section>
+    
+    <section class="slide title">
+      <h1>Attention, exemple de code!!<br /><br />
+      <img src="framework/img/workshop/rawbot-face.png" alt="robot face" /></h1>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exemples de syntaxe des langages de programmation
+        
+        ![](framework/img/workshop/hi-rawbot.png)<!-- .element: style="width:250px;float:right;"-->
+        La syntaxe varie d'un langage de programmation à l'autre. Voici deux façons différentes de faire dire « bonjour » à un ordinateur :
+
+        ## Java
+        
+        ```
+        Scanner userInput = new Scanner(System.in);
+        String name;
+        System.out.print("Comment t'appelles-tu? ");
+        nom = userInput.next();
+        System.out.println("Bonjour, " + nom);
+        ```
+        
+        ## JavaScript
+        ```
+        var nom;
+        nom = window.prompt("Comment t'appelles-tu?",'');
+        document.write("Bonjour, " + nom);
+        ```
+      </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Le JavaScript comparé au Java
+
+        Bien qu'ils se ressemblent, comme c'est le cas avec de nombreux langages de programmation, ces deux langages n'ont aucun lien.
+
+        ![java javascript](framework/img/workshop/java-javascript-rawbot.png)
+
+        (Le Java était très populaire à l'époque de la création du JavaScript. Netscape a volé le nom.)<!-- .element: class="note" -->
+      </script>    
+    </section>
+    
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # Le JavaScript dans le navigateur
+
+        Le C++, le Java, et le .NET sont aussi des langages de programmation. Toutefois, ils s'exécutent directement sur le système d'exploitation (p. ex. : Windows, Mac, Linux).
+
+        ![computer diagram](framework/img/workshop/computer-diagram-os-languages.gif)<!-- .element: style="height:55vh;width:auto;" -->
+      </script>
+    </section>
+    
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # Le JavaScript dans le navigateur
+
+        Normalement, le JavaScript s'exécute dans un navigateur Web<br> (p. ex. : Safari, Firefox, Chrome, Internet Explorer).
+
+        ![javascript gears diagram](framework/img/workshop/javascript-gears.gif)<!-- .element: style="height:55vh;width:auto;" -->
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # Côté serveur et côté client
+
+        ![diagramme frontal et dorsal](framework/img/workshop/backend-front-end.gif)
+
+        On dit souvent que le **JavaScript** est un langage de programmation Web « frontal » ou _côté client_, car il est interprété par le navigateur Web.
+      </script>
+    </section>
+    
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # Côté serveur et côté client
+
+        ![diagramme d'ordinateur](framework/img/workshop/backend-front-end-server.gif)<!-- .element: width="62%" -->
+
+        De leur côté, les langages Java, .NET, PHP ou Ruby sont considérés des langages de programmation Web « *dorsaux* » ou _côté serveur_, puisque le code est compilé et exécuté par le système d'exploitation d'un ordinateur agissant comme serveur pour des pages Web. 
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Côté serveur ou côté client: vérification facile
+        
+        ![diagramme d'ordinateur](framework/img/workshop/llcodedotcom_viewsource.gif)<!-- .element: class="left" -->
+
+        Sur *n'importe quelle* page Web, faites un *clic droit* sur la page et cliquez sur *Afficher le code source* pour voir le code du côté client. Ce code comprend le JavaScript ainsi que le HTML et le CSS. (Essayez-le vous-même!)
+
+        Comme le code du côté serveur ne s'affiche pas dans le navigateur, le langage utilisé par le serveur est parfois un véritable mystère.
+        
+        Même si le JavaScript peut aussi être utilisé dans des programmes côté serveur, nous nous concentrerons sur ce que l'on voit dans le navigateur pour ce cours.
+      </script>
+    </section>
+
+    <section class="slide triad" data-markdown>
+      <script type="text/template">
+        # Le trio du Web : HTML, CSS, JavaScript
+
+        Le **JavaScript** est conçu pour modifier des pages Web écrites en **HTML**. Il fonctionne aux côtés du **CSS**.
+
+        ![diagramme html trio du web](framework/img/workshop/web-triad-html.png)
+
+        Le **HTML** (Hypertext Markup Language) est un langage de balisage.
+
+        Il définit le **contenu**.
+      </script>
+    </section>
+    
+    <section class="slide triad" data-markdown>
+      <script type="text/template">
+        # Le trio du Web : HTML, CSS, JavaScript
+        
+        Le **JavaScript** est conçu pour modifier des pages Web écrites en **HTML**. Il fonctionne aux côtés du **CSS**.
+
+        ![diagramme css trio du web](framework/img/workshop/web-triad-css.png)
+
+        Le **CSS** (Cascading Style Sheets) est un langage de feuilles de style.
+
+        Il définit la **présentation**.
+      </script>
+    </section>
+    
+    <section class="slide triad" data-markdown>
+      <script type="text/template">
+       # Le trio du Web : HTML, CSS, JavaScript
+        
+        Le **JavaScript** est conçu pour modifier des pages Web écrites en **HTML**. Il fonctionne aux côtés du **CSS**.
+
+        ![diagramme javascript trio du web](framework/img/workshop/web-triad-javascript.gif)
+
+        Le **JavaScript** est un langage de programmation.
+
+        Il définit le **comportement**.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Le JavaScript dans des navigateurs différents
+
+        Habituellement, le JavaScript s'exécute de la même façon dans des navigateurs différents.
+        
+        ![guerre des navigateurs](framework/img/workshop/browser-war-illustration.jpg)<!-- .element: class="left" width="50%" -->
+        
+        Toutefois, les navigateurs sont des logiciels développés par de nombreuses entreprises et personnes différentes. Il y a donc parfois quelques différences dans leur fonctionnement.
+
+        On remarque particulièrement ces différences avec les nouvelles fonctionnalités du « HTML5 ».
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Expérience avec le JavaScript
+
+        Le JavaScript est essentiel pour construire des pages Web interactives. Faites cette petite expérience : désactivez le JavaScript dans votre navigateur. 
+        
+        Pour accéder aux paramètres du JavaScript dans Chrome, copiez et collez ceci, **chrome://settings/content**, dans la barre d'adresse. Puis, sélectionnez « Interdire à tous les sites d'exécuter JavaScript ».
+
+        Finalement, visitez des sites populaires. ([Google](http://google.com), [Facebook](http://facebook.com) , [Twitter](http://twitter.com))
+        
+        > Quelles sont les interactions manquantes?
+
+        (N'oubliez pas d'activer le JavaScript de nouveau!!!)<!-- .element: class="note" -->
+        
+        ---
+        ###Ressource
+        Voici comment accéder aux paramètres du JavaScript : Paramètres (dans le menu du navigateur) > Afficher les paramètres avancés... (lien) > Paramètres de contenu (bouton, sous Confidentialité)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Comment créer un programme?
+        
+        La programmation est l'équivalent de donner des directives à un ordinateur.
+
+        Pensez à un touriste qui vous approche pour retrouver son chemin. Plus vos directives sont claires, plus le touriste a de chances d'arriver à destination.
+
+        ![rawbot directions](framework/img/workshop/rawbot-directions.png) <!-- .element: style="height:50vh;" -->
+      </script>
+    </section>
+
+    <section class="slide steps" data-markdown>
+      <script type="text/template">
+        # Petit exercice : Say my name, say my name
+        
+        Je veux que l'ordinateur dise « bonjour » en m'appelant par mon nom. **Indiquez les étapes de la démarche** autant que possible :
+        
+        <ol>
+          <li class="delayed">
+            <img src="framework/img/workshop/name-text-rawbot.gif" alt="taper mon nom"> Laisse-moi taper mon nom.
+          </li>
+          <li class="delayed">
+            <img src="framework/img/workshop/remember-name-rawbot.gif" alt="souviens-toi"> Souviens-toi de mon nom.
+          </li>
+          <li class="delayed">
+            <img src="framework/img/workshop/say-my-name-rawbot.png" alt="dis bonjour"> Dis-moi « bonjour » et répète mon nom.
+          </li>
+        </ol>
+      </script>
+    </section>
+    
+    <section class="slide highlight" data-markdown>
+      <script type="text/template">
+        # Créer un programme
+        
+        Pour créer un programme qui forcera l'ordinateur à nous dire « bonjour », nous aurons besoin d'utiliser deux concepts du JavaScript, les *variables* et les *fonctions*.
+        
+        Veuillez noter que la syntaxe des langages de programmation est souvent plus complexe que celle du HTML et du CSS. Parfois, il faut plus de code pour voir des résultats dans le navigateur.
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        #Introduction aux fonctions et aux variables
+      </script>
+    </section>
+
+    <section class="slide two-col-list" data-markdown>
+      <script type="text/template">
+        #Automatiser des tâches répétitives
+
+        Qu'est-ce qui est très répétitif et encombrant dans la vie? Payer pour le stationnement. La vie ne serait-elle pas plus belle si le paiement était automatisé?
+        
+        * **Répétitif...**
+          1.  Trouver un guichet automatique
+          2.  Sortir sa carte
+          3.  Retirer de l'argent du guichet
+          4.  Acheter une collation pour avoir de la monnaie
+          5.  Mettre la monnaie dans la machine
+          6.  Prendre le reçu
+        * **Automatisé!**
+          1.  Sortir sa carte de crédit PayPass de son portefeuille
+          2.  Déposer sa carte sur le terminal
+          3.  Prendre le reçu
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Automatiser des tâches répétitives
+
+        1.  Sortir sa carte de crédit PayPass de son portefeuille
+        2.  **Déposer sa carte sur le terminal**
+        3.  Prendre le reçu
+        
+        On peut considérer l'étape 2 comme une fonction. Les étapes de l'action ne sont pas visibles, mais l'action exécute des directives qui nous permettent de payer automatiquement.
+        
+        Si l'action « déposer la carte sur le terminal » était une fonction en JavaScript, elle ressemblerait à ceci :
+
+        ```
+        déposerCarte()
+        ```
+      </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Introduction aux fonctions: `prompt()`
+
+        Les **fonctions** servent à demander au code de poser des actions. Nous pouvons créer nos propres fonctions (nous verrons comment très bientôt), mais il y en a déjà plusieurs intégrées au JavaScript.
+
+        La fonction `prompt()` contient des directives pour afficher une fenêtre modale avec une boîte de message et d'entrée de texte.
+        
+        Cliquez sur « Run » (Exécuter) ci-dessous pour voir ce qui se passe quand la fonction `prompt()` est exécutée.
+        
+        <img onclick="prompt()" src="framework/img/workshop/rawbot-run.png" alt="exécuter le code">
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Fonctions et instructions
+        
+        La fenêtre modale est vide! Pour afficher un message dans la fenêtre modale `prompt()`, tapez du texte à l'intérieur des parenthèses entre les guillemets. 
+
+        À noter qu'il faut seulement utiliser des guillemets anglais, **"**. Les guillemets français **« »** ne fonctionnent pas.
+        
+        De plus, complétez l'*instruction* avec un point-virgule (;) pour en indiquer la fin.
+        
+        Les **instructions** sont des commandes indiquant à l'ordinateur quoi faire.
+        
+        ```
+        prompt("Bonjour, comment t'appelles-tu?");
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Le JavaScript et le HTML
+
+        Le JavaScript peut être ajouté n'importe où sur une page Web. Habituellement, il se trouve dans la section `<head>` juste avant la balise de fermeture `</body>`.
+          
+        Toutefois, le code JavaScript lui-même doit toujours se trouver entre les balises <code>&lt;script&gt;&lt;/script&gt;</code>.
+          
+<pre><code>&lt;html>
+  &lt;head>
+    &lt;title>Exemple de JavaScript!&lt;/title>
+    &lt;script>
+      // Le JavaScript est dans la balise head!
+    &lt;/script>
+  &lt;/head>
+  
+  &lt;body>
+    &lt;script>
+      // Le JavaScript est dans la balise body!
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre>
+
+        ---
+        ###Conseil de pro!
+        
+        En mettant le JavaScript *avant* la balise de fermeture `</body>`, la page pourra se charger avant d'exécuter le JavaScript. C'est un détail important auquel penser en manipulant des éléments HTML.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Exercice de groupe : Say My Name, première partie
+        
+        <img src="framework/img/workshop/name-text-rawbot.gif" alt="taper mon nom" style="height: 80px;" class='left'> Laisse-moi taper mon nom
+        
+        <hr class="clear">
+        Dans votre éditeur, ouvrez **1-bonjour.html** et ajoutez l'extrait de code suivant :
+        
+        ```
+        prompt("Comment t'appelles-tu?");
+        ``` 
+        
+        Ensuite, ouvrez **1-bonjour.html** dans le navigateur et essayez la fonction « prompt ».
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Introduction aux variables
+        
+        Où est passé notre nom?
+        
+        La fonction `prompt()` peut être utilisée pour obtenir du texte de l'utilisateur, mais l'ordinateur ne se souviendra de rien si vous ne le lui demandez pas.  
+        
+        ![robot losing memory](framework/img/workshop/rawbot-losing-memory.png) <!-- .element: class="right" -->
+        
+        Il a besoin de directives *exactes*.
+        
+        Les **variables** sont l'équivalent de la mémoire à court terme d'un ordinateur. 
+        
+        Les variables sont comme des contenants. Elles servent à *contenir des valeurs* et peuvent être utilisées n'importe où selon nos besoins.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # La syntaxe des variables
+        
+        ![affectation des variables](framework/img/workshop/syntax-variable-assign.gif)
+
+        1. var est le **mot-clé** pour « variable ».
+
+        2. name est le **nom de la variable** indiqué par l'utilisateur.
+
+        3. "some value" est **une valeur quelconque** indiquée par l'utilisateur. Cette valeur est **affectée** au nom.
+
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Guide pour les variables
+
+        Déclarez (créez) des variables avec le mot-clé `var` et donnez-leur un nom.
+        
+        ```
+        var prénom;
+        ```
+
+        Donnez une valeur à la variable à l'aide du symbole égal `=`. Souvenez-vous de fermer l'instruction avec un point-virgule. Maintenant, l'ordinateur se rappellera de notre nom!
+
+        ```
+        prénom = "VotreNom";
+        ```
+        Il est aussi possible d'affecter une valeur à une variable et de nommer la variable en même temps.
+        
+        ```
+        var prénom = "VotreNom";
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Une autre fonction : `write()`
+        
+        Nous n'avons toujours pas demandé à l'ordinateur de nous dire bonjour. Faisons appel à une fonction, `write()`, pour afficher la réponse de l'ordinateur.
+        
+        Cette fois-ci, la fonction s'attache à la page HTML, que l'on appelle le **document**.  Le texte affiché doit se trouver entre parenthèses.
+        
+        ```
+        document.write("bonjour"); // affiche « bonjour » sur la page
+        ```
+        La fonction peut aussi afficher la valeur de la variable. N'oubliez pas que la variable ne prend pas de guillemets.
+        
+        ```
+        var prénom = "VotreNom";
+        document.write(prénom); // affiche « VotreNom » sur la page.
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Les variables et l'entrée de texte
+        
+        L'exemple précédent démontrait comment donner une valeur précise à la variable `prénom`.
+        
+        ```
+        var prénom = "VotreNom";
+        ```
+        
+        Mais que fait-on si l'on ne connaît pas encore la valeur?
+
+        Vous souvenez-vous de la fonction `prompt()`? Elle affiche une fenêtre qui permet à l'utilisateur d'entrer du texte.
+        
+        La fonction prompt peut aussi être affectée à une variable afin d'enregistrer la valeur du texte de l'utilisateur.
+
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Say My Name, deuxième partie
+        
+        <ol>
+          <li class="delayed">
+            <p>Laisse-moi taper mon nom</p>
+            <code class="delayed">prompt("Comment t'appelles-tu");</code>
+          </li>
+          <li class="delayed">
+            <p>Souviens-toi de mon nom</p>
+            <code class="delayed">var prénom = ?</code>
+            <code class="delayed">var prénom = prompt("Comment t'appelles-tu?");</code>
+          </li>
+        </ol>
+        
+        Revenons à <!-- .element: class="delayed" --> **1-bonjour.html** et mettons à jour notre programme.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Exercice de groupe : Say My Name, troisième partie
+        
+        La troisième et dernière partie consiste à demander à l'ordinateur de répéter notre nom. Utilisez la fonction `document.write()` pour lui faire dire « bonjour » et répéter la variable de nom.
+        
+        Retournez à **1-bonjour.html** et mettez à jour votre programme. Il devrait ressembler à ceci :
+        
+        ```
+        var prénom = prompt("Comment t'appelles-tu?");
+        document.write("Bonjour ");
+        document.write(prénom);
+        ```
+        Remarquez qu'il y a une espace *après* « Bonjour ». Elle est là pour nous assurer qu'il y a une espace entre les valeurs affichées.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Écrire du code
+        
+        Puisque les programmes ne sont que des séries d'instructions indiquant à l'ordinateur quoi faire, il y a énormément de façons différentes d'écrire du code pour des programmes.
+        
+        De plus, bien que `document.write()` et `prompt()` soient des fonctions rapides pour faire des expériences avec du code, elles ne sont pas des fonctions recommandées dans la « vraie vie ». 
+        
+        Nous verrons plus d'exemples et explorerons les **variables** et les **fonctions** en profondeur pendant le cours.
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #Le projet du jour!
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Le projet du jour!
+        
+        ![site web planète robots](framework/img/workshop/planet-robot-website.png)<!-- .element: class="left" -->
+        
+        En tant que propriétaire du site populaire *Planet Robots*, vous souhaitez avoir un site Web aux fonctionnalités parfaites.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Le projet du jour
+        
+        Voici quelques-uns des éléments que vous pensez ajouter à votre site :
+        
+        * achats en ligne
+        * impression d'étiquettes d'expédition
+        * rabais exclusifs aux membres
+        <!-- * les clients ne devraient pas pouvoir envoyer des formulaires vides -->
+        * total des objets du panier calculé précisément
+
+        Pour créer un site Web répondant à ces exigences, nous devons approfondir nos connaissances des **variables** et des **fonctions**. Nous verrons aussi les **objets** et les **instructions conditionnelles**.
+      </script>
+    </section>
+
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        #Variables
+        ##Enregistrer des informations
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Variables : révision 
+        
+        Les variables servent à enregistrer des valeurs.
+        
+        Déclarez une variable avec le mot-clé `var` et utilisez le symbole égal pour lui donner une valeur.
+        
+        Fermez l'*instruction* avec un point-virgule.
+        
+        ```javascript
+        var courriel = "allo@es-tula.com";
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # VARIABLES : CONVENTIONS DE NOM
+
+        Les noms des variables ne doivent pas contenir d'espaces. Plutôt que de mettre des espaces, mettez la première lettre d'un nouveau mot en majuscules `commeÇa` (usage courant) ou utilisez le trait de soulignement pour séparer les différents mots `comme_ça`.
+        
+        L'important est de toujours suivre le même style. À noter que le JavaScript est sensible à la casse.
+        
+        Utilisez un nom de variable descriptif :  
+        
+        `var prénom;` ← Il est évident que la variable enregistre le prénom.  
+        `var fn;` ← Pas aussi évident que « prénom ».  
+        `var x;` ← Incompréhensible.  
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exemple de variable
+
+        Pourquoi les variables sont-elles pratiques?
+        
+        Dans un formulaire d'achat en ligne, il faut entrer son nom et son adresse pour l'expédition. Les variables servent à enregistrer ces informations, qui seront ensuite utilisées pour créer des étiquettes d'expédition.
+
+        ![exemple livraison](framework/img/workshop/var-shipping-example.jpg)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Affecter des variables
+
+        Le symbole égal (`=`) en JavaScript ne signifie PAS la même chose qu'en mathématiques.
+
+        `var total = 1 + 1` n'est pas la même chose que `1 + 1 = 2`
+
+        `var total = 1 + 1` signifie :
+
+        * _évaluer_ tout ce qui est à _droite_ du symbole égal (`1 + 1`)
+        * puis _affecter_ cette valeur (`2`) à la variable du _côté_ gauche.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Types de variables
+
+        Les variables peuvent contenir différents *types* de valeurs.
+
+        Variables numériques (nombres entiers et décimales) :
+        ```
+        var nombreEntier = 10;
+        var uneDécimale = 10.5; // utiliser « . » plutôt que « , » pour les décimales
+        ```
+        
+        Chaînes de caractères (lettres, chiffres, symboles), toujours entre guillemets :
+        ```
+        var chaîneUnMot = "Bonjour";
+        var chaînePhrase = "Bonjour, j'espère que vous allez bien!";
+        var chaîneChiffres = "10";
+        ```
+        
+        Variables booléennes (vrai et faux, *true et false* en anglais)
+        ```
+        var nousSommesSamedi = true;
+        var nousSommesDimanche = false;
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Commentaires
+
+        Parfois, nous voulons écrire des notes personnelles, organiser des blocs de code ou « cacher » du code que nous ne voulons pas effacer, mais qui n'est pas prêt à être utilisé. Les commentaires servent à ça, et le navigateur ne les affiche pas.
+        
+        ```javascript 
+        // Voici comment faire un commentaire comprenant une seule ligne. 
+        
+        // Nous pouvons faire autant de commentaires que nous le souhaitons.
+        // Assurez-vous d'utiliser deux barres obliques vers l'avant...
+        // pour chaque ligne de commentaires ```
+
+        Une autre façon de faire un commentaire avec un gros bloc de texte :
+
+        ```javascript 
+        /* Voici comment faire un commentaire pour du texte de plusieurs lignes. */ 
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Le blanc en JavaScript
+
+        Le « blanc » fait référence aux caractères vides, aux espaces, aux tabulations et aux sauts de ligne. Dans certains cas, le JavaScript ignore le blanc.
+
+        ```javascript 
+        var nom="Ladies Learning Code"; // Les deux seront lus de la même façon en JavaScript
+        var nom = "Ladies Learning Code"; 
+        ```
+        
+        Toutefois, le blanc est très important dans les chaînes de caractères, les mots-clés et les variables.
+        ```javascript    
+        var nom = "LadiesLearningCode";
+        var nom = "Ladies Learning Code"; 
+        varnom = "Ladies Learning Code"; // Ne fonctionnera pas
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice : Informations d'expédition' (10 minutes)
+
+        Obtenons quelques informations de base pour la livraison.
+        
+        Ouvrez **2-infos-expédition.html** dans l'éditeur et dans le navigateur.
+        
+        En ce moment, si vous exécutez le programme dans le navigateur, les informations d'expédition ne sont pas enregistrées et rien n'est affiché. 
+        
+        Comment y remédier?
+
+        1. Utilisez des variables pour enregistrer le nom et le code postal.
+        1. Utilisez la fonction `document.write()` pour afficher le nom et le code postal afin de confirmer que les informations sont bien enregistrées.  
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Corrigé de l'exercice
+
+        ```
+        // 1. Déclarez une variable pour enregistrer la valeur du nom.
+        // 2. Déclarez une variable pour enregistrer la valeur du code postal.
+        var nom = prompt("Comment vous appelez-vous?");
+        var codePostal = prompt("Quel est votre code postal?");
+
+        // Ce n'est qu'un en-tête
+        document.write("<h1>Informations d'expédition :</h1>");
+        
+        document.write(nom); // affiche le nom
+        document.write("<br>"); // juste un saut de ligne
+        document.write(codePostal); // affiche le code postal
+        ```
+        
+        Le corrigé se trouve également dans le fichier <!-- .element: class="note" --> **2-infos-expédition-corrigé.html**.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        # Opérateurs arithmétiques en JavaScript
+        
+        Le JavaScript peut aussi faire des maths :
+        `+` addition, `-` soustraction, `*` multiplication, `/` division
+        
+        ```javascript
+        var addition = 5 + 2; // retourne une valeur de 7
+        ```
+
+        Ces opérations fonctionnent peu importe si les valeurs elles-mêmes sont des chiffres ou si les chiffres sont contenus dans une variable.
+        
+        ```javascript
+        var exempleUn = 5;
+        var exumpleDeux = 2;
+        var valeurFinale = exempleUn * exempleDeux; // retourne une valeur de 10
+        ```
+        
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Calculer le total
+        
+        Le JavaScript est pratique pour faire des maths. Par exemple, il peut calculer le total d'un panier d'achats.
+        
+        Le JavaScript peut faire des maths avec des variables, pas seulement avec des valeurs numériques.
+        
+        ```javascript
+        var prixChandail = 25;
+        var prixAndroid = 10;
+        var total = prixChandail + prixAndroid;
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Exercice : Total du panier (10 minutes)
+        
+        Ouvrez **3-panier.html** dans votre éditeur.
+        
+        Il y a 3 variables définies dans le fichier d'exercices :
+        
+        ```
+        var prixChandail = 25;
+        var prixAndroid = 10;
+        var réduction = 0.15; // 15%
+        ```
+        
+        Suivez les directives dans les commentaires pour trouver le sous-total du chandail et du toutou d'Android avec une réduction de 15 %.
+      </script>
+    </section>
+    
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Corrigé de l'exercice :
+        
+        ```javascript
+        var prixChandail = 25;
+        var prixAndroid = 10;
+        var réduction = 0.15; // 15%
+
+        // Quel est le prix total d'un chandail et d'un Android?
+        var soustotal = prixChandail + prixAndroid;
+        document.write("Sous-total : $");
+        document.write(soustotal);
+        document.write("<br>");
+
+        // Le saviez-vous? Les membres de Ladies Learning Code profitent d'une réduction de 15 %!
+        // Essayez de trouver le montant de la réduction.
+        var montantRéduction = soustotal * réduction;
+        document.write("Réduction : $");
+        document.write(montantRéduction);
+        document.write("<br>");
+
+        // Appliquez la réduction pour obtenir le total.
+        var total = soustotal - montantRéduction;
+        document.write("Total : $");
+        document.write(total);
+        ```
+        
+        Sortie :
+        
+        ```javascript
+        Sous-total : $35
+        Réduction: $5.25
+        Total : $29.75
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Concaténation
+
+        Si vous utilisez l'opérateur `+` avec une valeur numérique, les valeurs seront additionnées. Sinon, les valeurs de sortie seront *combinées* en une chaîne, une opération que l'on appelle la **concaténation**, ou un **enchaînement**.
+
+        
+        Plutôt que de faire ceci :
+        
+        ```javascript
+        var total = total - montantRéduction;
+        document.write("Total : $");
+        document.write(total);
+        ```
+        
+        Utilisez la concaténation pour combiner la chaîne avec la valeur de la variable.
+
+        ```javascript
+        var total = total - montantRéduction;
+        document.write("Total : $" + total);
+        ```
+        
+        Sortie :
+        
+        ```javascript
+        Total : $29.75
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Exercice : Concaténation (10 minutes)
+        
+        Retournez dans **3-panier.html** et mettez à jour les valeurs de `document.write()` pour combiner les valeurs des variables avec les chaînes.
+        
+        
+        ---
+        Le corrigé se trouve aussi dans le fichier <!-- .element: class="note" --> **3-panier-corrigé.html**.
+        
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Réaffecter des variables
+
+        Même après avoir déclaré la valeur d'une variable, il est possible de la *réaffecter*. Par exemple, vous pouvez augmenter ou réduire les valeurs.
+
+        ```javascript
+        //déclaration de la variable
+        var nombreDeBiscuits = 0;
+        ```
+        
+        En *réaffectant* une variable, il est inutile d'utiliser le mot-clé `var` de nouveau.
+        
+        Si vous faites cuire deux biscuits, combien aurez-vous de biscuits au total?
+        
+        ```javascript
+        // réaffecte la valeur en ajoutant 2
+        nombreDeBiscuits = nombreDeBiscuits + 2;
+        ```
+      </script>
+    </section>
+    
+    <section class="slide llc-loves">
+      <h1>Qui aime Ladies Learning Code?</h1>
+      
+      Quand est-il pratique de réaffecter des valeurs? Cliquez sur ce bouton :
+      
+      <button id="plusCoeurs">
+        <img src="framework/img/workshop/llc-logo.png"> Coeur!
+        <span id="miseAJour">0</span>
+      </button>
+      
+      <script>
+        var coeurs = 0;
+        var miseAJour = document.getElementById('miseAJour');
+        var bouton = document.getElementById("plusCoeurs");
+        
+        function plusCoeurs(){
+          coeurs = coeurs + 1;
+          miseAJour.innerHTML = coeurs;
+        }
+        bouton.onclick = plusCoeurs;
+        //https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick
+      </script>
+      
+      <p class="delayed">Voyons comment faire ça.</p>
+<pre class="delayed"><code>var coeurs = 0; // valeur commence à 0
+var miseAJour = document.getElementById('miseAJour'); // élément HTML mis à jour
+
+// fonction personnalisée, convient des instructions pour mettre à jour le total
+function plusCoeurs(){ 
+  coeurs = coeurs + 1; // prend la valeur actuelle de « coeurs » et lui ajoute 1
+  miseAJour.innerHTML = coeurs; // met à jour l'élément HTML selon la valeur actuelle de « coeurs »
+}</code></pre>
+    </section>
+    
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Fonctions et objets personnalisés
+        
+        Nous avons vu deux nouveaux concepts dans l'exemple précédent. Les fonctions personnalisées :
+        
+        ```javascript
+        function plusCoeurs(){ 
+          // les instructions vont ici
+        }
+        ```
+        
+        Et la manipulation d'objets HTML :
+        
+        ```javascript
+        var miseAJour = document.getElementById('miseAJour');
+        miseAJour.innerHTML = coeurs;
+        ```
+        
+        Parlons d'abord des objets.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Les variables et les objets
+                
+        <img src="framework/img/workshop/variable-rice.png" alt="variable riz" class="left" height="130"> Une **variable** ne contient qu'une valeur.
+        ```
+        var bouffeEmporter = "Riz frit";
+        ```
+        <br>
+        Un **objet** contient un ensemble de valeurs et utilise une syntaxe différente.
+        
+        <img class="left" width="500" src="framework/img/workshop/object-bento-box.png" alt="objet boîte bento">
+        
+        ```javascript
+        // crée un nouvel objet
+        var boîtebento = {};
+        // affecte des valeurs
+        boîtebento.principal = "Teriyaki";
+        boîtebento.accompagnement = "Tempura";
+        boîtebento.salade = "Salade d'algues";
+        boîtebento.sushi = "Sushis au saumon et à l'avocat";
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Propriétés des objets
+
+        Les « compartiments » des objets s'appellent des **propriétés**. Il y a quelques façons d'accéder à la valeur de la propriété et de la définir, mais nous aborderons seulement la *notation avec un point* pendant cet atelier.
+        
+        ```javascript
+        var monObjet = {}; // crée un nouvel objet
+        monObjet.propriété = valeur; // affecte des valeurs
+        ```
+        
+        ```javascript
+        var boîtebento = {};
+        boîtebento.principal = "Teriyaki";
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Propriétés des objets
+        
+        Vous pouvez aussi *accéder* à la valeur d'une propriété à l'aide de la notation avec un point.
+        
+        ```javascript
+        // déclare une variable
+        var souper = "poulet";
+        document.write(souper);
+        ```
+        > Quelle valeur ce code retournera-t-il? <span class="delayed">poulet</span>
+        
+        ```javascript
+        // déclare un objet
+        var boîtebento = {};
+        boîtebento.principale = "teriyaki";
+        boîtebento.accompagnement = "riz";
+        document.write(boîtebento.accompagnement)
+        ```
+        > Quelle valeur ce code retournera-t-il? <span class="delayed">riz</span>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Méthodes et fonctions
+        
+        Les méthodes sont comme des fonctions, mais contrairement à ces dernières qui s'exécutent seules, elles s'appliquent aux objets.
+        
+        ##Fonction
+        
+        ```javascript
+        prompt("Bonjour");
+        ```
+        
+        ##Méthode
+        
+        ```javascript
+        document.write("Bonjour");
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Objets et méthodes
+
+        Dans le cadre de cet atelier, nous n'allons pas créer nos propres objets comme dans l'exemple précédent. Mais vous savez quoi? Presque* tout en JavaScript est un objet!
+        
+        Cela signifie que même les variables peuvent être traitées comme des objets. Les méthodes s'appliquent aux variables, comme les objets, à l'aide de la notation avec un point.
+        
+        Par exemple, il est possible d'utiliser la méthode `toFixed()` pour définir le nombre de chiffres dans une décimale après la virgule (un point, en JavaScript)!
+                
+        ```
+        var prix = 25;
+        var prixEnDollars = prix.toFixed(2);
+        document.write(prixEnDollars + "$");
+        ```
+        La sortie sera de `25.00$`.
+        
+        L'exemple ci-dessous fonctionne aussi. Voyez-vous la différence?
+        
+        ```
+        var prix = 25;
+        document.write(prix.toFixed(2) + "$");
+        ```
+        
+        ---
+        ### Ressources
+        * [*Is everything in JavaScript an Object? - en anglais](https://blog.simpleblend.net/is-everything-in-javascript-an-object/)
+        * [La méthode toFixed() et d'autres méthodes en JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number/toFixed)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Exercice : Les objets et les méthodes (~10 minutes)
+        
+        Supposons que vous voulez une réduction de 50 % sur vos achats. Tous les prix peuvent être multipliés par 50 % (ou divisés par 2), mais vous devez vous assurer que la valeur est toujours arrondie à deux chiffres après la virgule. 
+        
+        ```
+        var réduction = 0.5; // réduction de 50%
+        var chandail = 20 * réduction;
+        var android = 35 * réduction;
+        var robot = 25.99 * réduction;
+
+        document.write(chandail);
+        document.write(android);
+        document.write(robot);
+        ```
+        
+        Sortie actuelle de ces fonctions : 10, 17.5 et 12.995. 
+        
+        Dans l'éditeur et le navigateur, ouvrez **4-méthodes.html**. Utilisez la méthode `toFixed()` pour mettre à jour la sortie des valeurs.
+        
+        <!-- .element: class="note" -->Vous trouverez le corrigé dans le fichier **4-méthodes-corrigé.html**.
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        # Deuxième partie
+        ## DOM, fonctions, méthodes, expressions conditionnelles
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        #Document Object Model (DOM)
+        ##Manipuler des objets sur une page HTML
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Document Object Model (DOM)
+        
+        Essayez d'imaginer qu'une page Web en HTML (le **document** dans le navigateur) est composée de plusieurs blocs.
+        
+        ![blocs du navigateur](framework/img/workshop/browser-blocks.jpg)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Blocs prédéfinis
+        
+        Certains blocs sont définis par le navigateur, comme la *fenêtre* du navigateur et le *document*.
+        
+        ![fenêtre du navigateur](framework/img/workshop/browser-window.jpg)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Blocs définis par l'utilisateur
+        
+        Il y a aussi des blocs que nous créons nous-mêmes avec des balises HTML (p. ex. : `<div>`, `<img>`, etc).
+        
+        ![blocs du navigateur](framework/img/workshop/browser-fieldset-div.jpg)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Objets du document
+        
+        Tous ces blocs sont aussi des **objets**. 
+        
+        Les méthodes peuvent être appliquées à ces **objets** à l'aide de la notation avec un point. Ça ne vous rappelle pas quelque chose?  
+        
+        ```
+        document.write();
+        ``` 
+        
+        Nous avons appliqué la méthode `.write()` à l'objet du document.
+        
+        <!-- .element: class="note" -->Rappel! Quand une fonction s'applique à un objet, on l'appelle une **méthode**.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Objets d'élément HTML
+        
+        Plutôt que d'utiliser `document.write()` pour afficher du contenu sur une page, utilisons la méthode `getElementById()` pour interagir avec les éléments HTML du *document* Web.
+        
+        Pour ce faire, vous aurez besoin d'ajouter un attribut `id` au HTML :
+        
+        ```
+        <div id="miseAJour">0</div>
+        ```
+        ```
+        document.getElementById("miseAJour");
+        ```
+        Cela signifie que la méthode cherchera les éléments HTML ayant l'attribut `id` dans le document. Vous pouvez utiliser cette méthode pour modifier directement le HTML!
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Révision
+        
+        Regardons le bouton "coeurs" à nouveau, cette fois, avec le HTML.
+        
+        ```
+        <button id="boutonPlus">
+          <img src="framework/img/workshop/llc-logo.png"> Coeur!
+          <span id="miseAJour">0</span>
+        </button>
+        ```
+        ```
+        // commence à 0
+        var coeurs = 0;
+        // cible l'élément "miseAJour"
+        var miseAJour = document.getElementById("miseAJour"); 
+        // cible l'élément "boutonPlus"
+        var bouton = document.getElementById("boutonPlus"); 
+        
+        // fonction personnalisée
+        function plusCoeurs(){
+          // ajoute 1 au total actuel
+          coeurs = coeurs + 1;   
+          // applique la méthode .innerHTML au total de l'élément miseAJour
+          miseAJour.innerHTML = coeurs; 
+        }
+        
+        // quand le bouton est cliqué, il exécute la fonction personnalisée plusCoeurs()
+        bouton.onclick = plusCoeurs; 
+        ```
+        
+        Voyons comment créer nos propres fonctions personnalisées.
+      </script>
+    </section>
+      
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Créer nos propres fonctions
+        
+        Il faut parfois regrouper un ensemble d'instructions qui n'ont pas de fonction prédéfinie en JavaScript.
+        
+        En utilisant une fonction, nous exécutons toutes les commandes qui se trouvent à l'intérieur, ce qui simplifie la répétition d'étapes.
+
+        Comme dans l'exemple précédent, il nous est possible de créer nos propres fonctions.
+        
+        Pour créer une fonction, il faut d'abord la **définir**.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Définir une fonction
+
+        Il y a plusieurs manières de définir une fonction, mais la manière la plus courante est d'utiliser le mot-clé `function` suivi du nom de notre choix et de parenthèses `()`. 
+        
+        Les instructions à exécuter doivent se trouver à l'intérieur d'accolades `{}`.
+        
+        ```
+        function nomDeLaFonction(){
+          // instructions à exécuter
+        }
+        ```        
+        En nommant une fonction, assurez-vous de suivre les mêmes conventions que celles des noms de variables (sans espace, avecMajuscules ou avec_trait).
+      </script>
+    </section>  
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Appeler une fonction
+
+        Pour utiliser une fonction, qu'elle soit personnalisée ou prédéfinie, il faut l'*appeler* en écrivant le nom de la fonction suivi de parenthèses `()`.
+        
+        Une fonction peut même comprendre une autre fonction.
+        
+        ```javascript
+        // déclare la fonction
+        function disQuelqueChose(){
+          prompt("Comment vas-tu?");
+        }
+        
+        // appelle la fonction
+        disQuelqueChose();
+        ```
+      </script>
+    </section>
+    
+    <section class="slide exercise">
+        <h1>Mettre à jour les quantités</h1>
+        <div class="quantité">
+          <img src="exercises/assets/plush-android.jpg" width="195" height="195">
+          <br>
+          
+          <button id="ajouter">ajouter</button>
+          <button id="enlever">enlever</button>
+          <br>
+          
+          Quantité <input type="text" id="miseAJourQuantité" value="0">
+        </div>
+        
+        <p>Afin de mettre en pratique tous nos apprentissages de la journée, créons un programme qui permettra au client de mettre à jour la quantité d'objets en cliquant un bouton Ajouter ou Enlever, comme dans l'exemple en haut à gauche.</p>
+        
+        <p><strong>Attention!</strong> En ce moment, un nombre négatif apparaît si l'on enlève des objets. Nous allons remédier à ce problème dans le dernier exercice.</p>
+        
+        <script>
+          // de l'exercice du fichier 5-mise-a-jour-quantité.html
+          var quantité = 0;
+          var miseAJourQuantité = document.getElementById('miseAJourQuantité');
+          var ajouter = document.getElementById("ajouter");
+          var enlever = document.getElementById("enlever");
+          
+          function ajouterObjet(){
+            quantité = quantité + 1;
+            miseAJourTotal();
+          }
+          function enleverObjet(){        
+            quantité = quantité - 1;
+            miseAJourTotal();
+          }
+          function miseAJourTotal() {
+            miseAJourQuantité.value = quantité;
+          }
+          ajouter.onclick = ajouterObjet;
+          enlever.onclick = enleverObjet;
+        </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Préparation à l'exercice : Mise à jour des quantités
+        
+        Tout d'abord, divisons la tâche en petites étapes et faisons un plan d'action. N'oubliez pas que les ordinateurs ont besoin de directives très précises pour savoir quoi faire.
+        
+        1. Créez une variable pour contenir et suivre le nombre d'objets sélectionnés (la quantité).
+        1. Créez un ensemble d'instructions pour le bouton Ajouter.
+          * avec chaque clic, la quantité augmente de 1
+        1. Créez un ensemble d'instructions pour le bouton Enlever.
+          * avec chaque clic, la quantité baisse de 1
+        1. Sélectionnez l'élément HTML qui affichera la quantité.
+        1. Mettez à jour l'élément HTML avec la quantité actuelle.
+        1. Exécutez les instructions du bouton Ajouter quand le bouton Ajouter est cliqué.
+        1. Exécutez les instructions du bouton Enlever quand le bouton Enlever est cliqué.
+
+        
+        Ouvrez le fichier **5-mise-a-jour-quantité.html** dans l'éditeur. Faisons chaque étape en grand groupe.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 1   
+        ## Créez une variable pour contenir et suivre le nombre d'objets sélectionnés (la quantité).
+        ---
+        (N'oubliez pas que vous pouvez choisir le nom de vos variables et de vos fonctions tant que vous suivez les conventions de nom.)<!-- .element: class="note" -->
+
+        Comment peut-on déclarer une variable nommée « quantité »?<!-- .element: class="delayed" -->
+        
+        <pre class="delayed"><code>var quantité;</code></pre>
+        
+        Comment peut-on affecter une valeur de 0 à la variable?<!-- .element: class="delayed" -->
+        
+        <pre class="delayed"><code>var quantité = 0;</code></pre>
+        
+        Ajoutez cet extrait de code à l'intérieur des balises <!-- .element: class="delayed" --><code>&lt;script&gt;&lt;/script&gt;</code>.
+        
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 2
+        ## Créer un ensemble d'instructions pour le bouton Ajouter.
+        ---
+        Déclarez une fonction pour exécuter un ensemble d'instructions. Appelez-la « ajouterObjet ». Comment déclare-t-on une fonction?
+
+        <pre class="delayed"><code>function ajouterObjet(){ 
+        }</code></pre>
+        
+        La variable<!-- .element: class="delayed" --> `quantité` suit la quantité, le nombre d'éléments sélectionnés. *Réaffectez* la variable pour ajouter 1 au nombre quand un objet est sélectionné.
+        
+        <pre class="delayed"><code>var quantité = 0;
+          
+        function ajouterObjet(){
+          quantité = quantité + 1; 
+        }</code></pre>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 3
+        ## Créez un ensemble d'instructions pour le bouton Enlever
+        ---
+        
+        Ce bouton sera semblable à la fonction `ajouterObjet`, mais cette fois-ci, 1 chiffre sera *soustrait* de la valeur quantité à chaque clic.
+        
+        Comment déclare-t-on une fonction portant le nom de « enleverObjet »? <!-- .element: class="delayed" -->     
+        <pre class="delayed"><code>function enleverObjet(){  
+        }</code></pre>
+
+        Réaffectez la variable afin que 1 chiffre soit soustrait de <!-- .element: class="delayed" -->`quantité` quand un objet est enlevé.
+        
+        <pre class="delayed"><code>function enleverObjet(){
+          quantité = quantité - 1; 
+        }</code></pre>
+        
+        Votre code devrait maintenant ressembler à ça :<!-- .element: class="delayed" -->
+        
+        <pre class="delayed"><code>var quantité = 0;
+        
+        function ajouterObjet(){
+          quantité = quantité + 1; 
+        }
+        function enleverObjet(){
+          quantité = quantité - 1; 
+        }</code></pre>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 4
+        ## Sélectionnez l'élément HTML qui affichera la quantité.
+        ---
+        
+        ![](framework/img/workshop/update-quantities.png) <!-- .element: class="left" height="340" -->
+        
+        Dans le HTML, la balise `<input>` affiche la valeur de la quantité.
+        ```
+        <input type="text" value="0">
+        ```
+
+        </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 4
+        ## Sélectionnez l'élément HTML qui affichera la quantité.
+        ---
+        
+        ![](framework/img/workshop/update-quantities.png) <!-- .element: class="left" height="340" -->
+        
+        Ajoutez un attribut `id` à l'élément afin que celui-ci puisse être sélectionné par la méthode `getElementById()`.
+        
+        <pre class="delayed"><code>&lt;input id=&quot;miseAJourQuantité&quot; type=&quot;text&quot; value=&quot;0&quot;&gt;
+        </code></pre>
+        
+        Ensuite, dans le JavaScript, sélectionnez l'élément HTML.<!-- .element: class="delayed" -->
+        
+        <pre class="delayed"><code>document.getElementById("miseAJourQuantité");
+        </code></pre>
+        
+        Créez une variable avec l'élément HTML sélectionné.<!-- .element: class="delayed" -->
+        <pre class="delayed"><code>var miseAJourQuantité = document.getElementById('miseAJourQuantité');
+        </code></pre>
+
+        </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 4
+        ## Sélectionnez l'élément HTML qui affichera la quantité.
+        ---
+        
+        Votre code JavaScript devrait maintenant ressembler à ceci :
+        
+        <pre class="delayed"><code>var quantité = 0;
+        var miseAJourQuantité = document.getElementById('miseAJourQuantité');
+        
+        function ajouterObjet(){
+          quantité = quantité + 1;
+          // ajoute une fonction à la valeur pour mettre à jour la quantité dans le HTML
+        }
+        function enleverObjet(){
+          quantité = quantité - 1; 
+          // ajoute une fonction à la valeur pour mettre à jour la quantité dans le HTML
+        }</code></pre>
+        
+        Veuillez noter que la valeur de `id` peut seulement être utilisée une fois par page afin de nous assurer qu'elle est unique.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 5
+        ## Mettez à jour l'élément HTML avec la quantité actuelle.
+        ---
+        Dans l'étape précédente, nous avons sélectionné l'élément HTML pour afficher la valeur de la quantité.
+        
+        ```
+        var miseAJourQuantité = document.getElementById('miseAJourQuantité');
+
+        ```
+        
+        Toutefois, la variable `quantité` contient la valeur de la quantité.
+        ```
+        var quantité = 0;
+        ```
+        
+        Nous devons faire en sorte que la valeur `miseAJourQuantité` soit égale à `quantité` afin que l'élément HTML affiche le chiffre de la valeur sur la page.
+
+        </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 5
+        ## Mettez à jour l'élément HTML avec la quantité actuelle.
+        ---
+        
+        Vous souvenez-vous des notions à propos des objets et des propriétés et comment définir les valeurs des objets comme dans l'exemple de la boîtebento?
+        
+        ```javascript
+        objet.propriété = valeur;
+        boîtebento.principal = "poulet";
+        ```
+        
+        Nous pouvons faire la même chose ici en utilisant la propriété `.value` (« valeur ») pour définir la valeur de `miseAJourQuantité`.
+        
+        ```
+        var quantité = 0;
+        var miseAJourQuantité = document.getElementById('miseAJourQuantité');
+        
+        miseAJourQuantité.value = quantité;
+
+        ```
+
+        La quantité doit être mise à jour chaque fois que l'utilisateur ajoute ou enlève un objet. Mettez à jour les fonctions `ajouterObjet()` et `enleverObjet()` en y ajoutant l'instruction miseAJourQuantité.
+
+        ```
+        var quantité = 0;
+        var miseAJourQuantité = document.getElementById('miseAJourQuantité');
+        
+        function ajouterObjet(){
+          quantité = quantité + 1;
+          miseAJourQuantité.value = quantité;
+        }
+        function enleverObjet(){
+          quantité = quantité - 1;
+          miseAJourQuantité.value = quantité;
+        }
+        ```
+      </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 6
+        ##Exécutez les instructions du bouton Ajouter quand le bouton Ajouter est cliqué.
+        ---
+
+        Rappelez-vous qu'en créant une fonction, nous ne faisons que regrouper une série d'instructions sous un nom de fonction. Toutefois, pour l'exécuter, il faut *appeler* la fonction.
+
+        Qu'à cela ne tienne, nous ne pouvons pas simplement utiliser `ajouterObjet()` pour *l'appeler*, parce que la fonction ne s'exécute qu'*à la suite d'un clic sur le bouton* (on button click).
+
+        Comme avec la boîte de quantités du HTML, nous pouvons sélectionner le bouton « Ajouter » en ajoutant un attribut `id` et en utilisant `getElementById`.
+
+        ```
+        <button id="ajouter">Ajouter</button>
+        ```
+        ```
+        var ajouterBouton = document.getElementById("ajouter");
+        ```
+
+        Le JavaScript comprend une propriété `onclick` (« quand l'élément est cliqué ») à utiliser pour enclencher une action au moment où un bouton a été cliqué.
+        </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice de groupe : Quantité, étape 6
+        ##Exécutez les instructions du bouton Ajouter quand le bouton Ajouter est cliqué.
+        ---
+        
+        Quelle action souhaitons-nous enclencher quand le bouton est cliqué (« onclick »)? Nous voulons exécuter la fonction `ajouterObjet()`! La syntaxe utilisée pour exécuter une fonction avec cette propriété est un peu différente de celle des exemples précédents.
+
+        Selon la [documentation](https://developer.mozilla.org/fr/docs/Web/API/GlobalEventHandlers/onclick), la syntaxe ressemble à ceci :
+        
+        ```javascript
+        élément.onclick = nomFonction;
+        ```
+        
+        Pour exécuter la fonction `ajouterObjet()` et l'enclencher quand le bouton est cliqué, faites-ceci :
+        
+        ```
+        ajouterBouton.onclick = ajouterObjet;
+        ```
+
+        Essayez votre bouton Ajouter dans le navigateur!  
+        Le compteur devrait augmenter de 1 à chaque clic.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercice : Quantités, étape 7 (~10 minutes)
+        ##Exécutez les instructions du bouton Enlever quand le bouton Enlever est cliqué
+        ---
+        
+        Faites cette dernière étape individuellement ou en compagnie d'un partenaire ou d'un mentor.
+
+        Les étapes sont les mêmes que celles de l'étape 6, sauf que nous ajoutons la fonctionnalité de « clic » au bouton Enlever.
+
+        **Attention!** En essayant le bouton Enlever, après avoir atteint la valeur 0, le compteur affichera des chiffres négatifs. Nous allons y remédier dans la prochaine section.
+
+        Vous trouverez le corrigé pour ce programme en entier dans le fichier <!-- .element: class="note" -->**mise-a-jour-quantité-corrigé.html**.
+      </script>
+    </section>
+
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        #Instructions conditionnelles 
+        ##Prendre des décisions selon des conditions
+      </script>
+    </section>
+      
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Instructions conditionnelles
+
+        En utilisant des instructions conditionnelles, il est possible d'ajouter des instructions différentes à un programme en fonction de conditions satisfaites ou non satisfaites. (Si (« if ») / alors (« then »), et vrai (« true ») / faux (« false »).
+
+        Une condition de base ressemble à ceci :
+        
+        ```javascript
+        SI il pleut
+          ALORS sors ton parapluie
+        ```    
+
+        En JavaScript, une instruction conditionnelle ressemble à ceci :
+        
+        ```
+        if ( temps === pluie ) {
+          sortirParapluie();
+        }
+
+        if ( temps < 10 ) {
+          porterManteau();
+        }
+        ```  
+      </script>
+    </section>
+      
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #L'affectation n'est pas la même chose que l'égalité
+
+        **ATTENTION!**
+
+        `=` affectation 
+        ```javascript
+        var chaton = "doux";
+        ```
+
+        `==` égalité
+        ```javascript
+        10 == "10" // vrai (true)
+        1  == 10 // faux (false)
+        ```
+
+        `===` pour une égalité précise
+        ```javascript
+        10 === 10 // vrai (true)
+        10 === "10" // faux (false)
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Conditionnels if / else ... if / else
+
+        Le mot-clé `else` (« sinon ») désigne une instruction passe-partout exécutée au cas où la condition n'est pas satisfaite.
+        
+        ```
+        if ( temps == pluie ) {
+            sortirParapluie();
+        } else {
+            sansParapluie();
+        }
+        ```
+      </script>
+    </section>
+        
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Conditionnels : else if
+
+        Allez encore plus loin en ajoutant « sinon, si » (`else if`) pour mettre encore plus de conditions, autant que vous le souhaitez.
+
+        ```
+        if ( temps == pluie ) {
+          sortirParapluie();
+        } else if ( temps == neige ) {
+          porterBottesChaudes();
+        } else {
+          vêtementsNormaux();
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide">
+      <h1>Résumé des instructions conditionnelles</h1>
+      <table cellpadding="20" style="width:100%">
+        <tr>
+          <td><h3>Instruction If</h3></td>
+          <td><h3>Instruction If...else</h3></td>
+          <td><h3>Instruction If...else If...else </h3></td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <div data-markdown>
+              ```javascript
+              if (condition) {
+                // si la condition est satisfaite, faire quelque chose
+              }
+              ```
+            </div>
+          </td>
+          <td valign="top">
+            <div data-markdown>
+              ```javascript
+              if (condition) {
+                // si la condition est satisfaite, faire quelque chose
+              } else {
+                // sinon, faire autre chose
+              }
+              ```
+            </div>
+          </td>
+          <td valign="top">
+            <div data-markdown>
+              ```javascript
+              if (condition) {
+                // si la condition est satisfaite, faire quelque chose
+              } else if (condition2) {
+                // sinon, si la condition 2 est satisfaite, faire quelque chose
+              } else {
+                // sinon, faire autre chose
+              }
+              ```
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Opérateurs logiques et de comparaison
+
+        <table cellspacing="0" class="comparison-table" style="margin-right:2%;width:52%;">
+          <tr>
+            <th align="left" colspan="3">Opérateurs de comparaison</th>
+          </tr>
+          <tr>
+            <td width="15%">==</td>
+            <td width="41%">est égal à</td>
+            <td width="44%">dix == deux * 5</td>
+          </tr>
+           <tr>
+            <td width="15%">===</td>
+            <td width="41%">est exactement égal à (tant en valeur qu'en type) </td>
+            <td width="44%">dix === 10<br />dix === "10" (faux) </td>
+          </tr>
+           <tr>
+            <td width="15%">!=</td>
+            <td width="41%">n'est pas égal à</td>
+            <td width="44%">dix !== deux</td>
+          </tr>
+           <tr>
+            <td width="15%">&gt;</td>
+            <td width="41%">plus grand que</td>
+            <td width="44%">dix &gt; deux</td>
+          </tr>
+            <tr>
+            <td width="15%">&lt;</td>
+            <td width="41%">plus petit que</td>
+            <td width="44%">deux &lt; dix</td>
+          </tr>
+            <tr>
+            <td width="15%">&gt;=</td>
+            <td width="41%">plus grand que ou égal à</td>
+            <td width="44%">dix &gt;= deux * 5<br />dix &gt;= deux * 5 + 1</td>
+          </tr>
+            <tr>
+            <td width="15%">&lt;=</td>
+            <td width="41%">plus petit que ou égal à</td>
+            <td width="44%">deux &lt;= dix<br />deux &lt;= 2 </td>
+          </tr>
+        </table>
+
+        <table cellspacing="0" class="comparison-table" style="width:46%;">
+          <tr>
+            <th align="left" colspan="3">Opérateurs logiques</th>
+          </tr>
+          <tr>
+            <td width="15%">&amp;&amp;</td>
+            <td width="25%">et</td>
+            <td width="60%">(dix < 11 &amp;&amp; dix > 9)</td>
+          </tr>
+           <tr>
+            <td width="15%">||</td>
+            <td width="25%">ou</td>
+            <td width="60%">(dix == 10 || deux == 2)</td>
+          </tr>
+          <tr>
+            <td width="15%">!</td>
+            <td width="25%">pas</td>
+            <td width="60%"> !(dix == deux)</td>
+          </tr>
+        </table>
+
+        `var deux = 2` et `var dix = 10`
+
+        Les exemples des tableaux ci-dessus montrent dans quelles conditions les instructions afficheraient *vrai* selon les variables indiquées.
+      </script>
+    </section>
+
+    <section class="slide">
+      <h1>Exemple d'instructions conditionnelles</h1>
+      <p>Dans l'exemple ci-dessous, quelle valeur pourrait-on ajouter pour faire apparaître les deux messages? Qu'arrive-t-il si la valeur est de 100? Cliquez sur « Run » (Exécuter) et vérifiez votre hypothèse.</p>
+
+<pre><code>var prix = prompt("Combien coûte le robot?");
+      
+if ( prix <= 100 ) {
+  alert(prix + "$" + " n'est pas cher. Je l'achète!");
+} else {
+  alert(prix + "$" + "? Mais c'est trop cher!");
+}</code></pre>
+      
+
+      <img onclick="siTest();" src="framework/img/workshop/rawbot-run.png" alt="">
+
+      <script>
+        function siTest(){
+          var prix = prompt("Combien coûte le robot?");
+        
+          if ( prix <= 100 ) {
+            alert(prix + "$" + " n'est pas cher. Je l'achète!");
+          } else {
+            alert(prix + "$" + "? Mais c'est trop cher!");
+          }
+        }
+      </script>
+    </section>  
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Exercice : Instructions conditionnelles (~10 minutes)
+        ##Empêcher les quantités négatives
+
+        Revenons à l'exemple du panier. Utilisez les opérateurs conditionnels afin que le compteur n'affiche plus de nombre négatif d'objets après avoir cliqué sur le bouton « Enlever ».
+
+        Le compteur devrait arrêter à 0.
+
+        Ouvrez le fichier d'exercice **6-quantités-conditionnelles.html** et modifiez la fonction `enleverObjet()` pour y inclure une instruction `if` qui vérifiera les valeurs négatives.
+      </script>
+    </section>  
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Corrigé de l'exercice
+
+        ```javascript
+        function enleverObjet(){
+          
+          if(quantité > 0) {
+            quantité = quantité - 1; 
+          }
+          miseAJourQuantité.value = quantité;
+        }
+        ```
+      </script>
+    </section>
+        
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Exercice bonus!
+        
+        Dans le même fichier d'exercice, **6-quantités-conditionnelles.html**, vérifiez le comportement du bouton **Caisse**!
+
+        1. Quand l'utilisateur clique sur le bouton **Passer à la caisse**, vérifiez si la `quantité` est d'au moins 0.
+        1. Si la `quantité` est de 0, utilisez `alert()` pour afficher le message « Vous ne pouvez pas passer à la caisse avec un panier vide. ».
+        1. Si la `quantité` est d'au moins 1, utilisez `alert()` pour afficher le message « Merci d'avoir passé une commande. ».
+
+        ---
+        Vous trouverez le corrigé dans le fichier **6-quantités-conditionnelles-corrigé.html** <!-- .element: class="note" -->
+      </script>
+    </section>
+
+
+    <section class="slide">
+      <h1>&lt;script src=""></h1>
+      <p>Plus vous écrivez de blocs de JavaScript ou si vous travaillez avec une équipe, plus vous voudrez mettre les blocs de code JavaScript dans leurs propres fichiers pour les gérer plus facilement. Un site volumineux peut contenir des milliers de lignes de code écrites par plusieurs personnes!</p>
+      
+      <p>Pour faire un lien vers un fichier de JavaScript externe, faites ceci :</p>
+      <pre><code>&lt;html>
+  &lt;head>
+    &lt;title>Exemple de JavaScript!</title>
+  &lt;/head>
+  &lt;body>
+    &lt;div id="example">Ceci est un exemple.</div>
+    &lt;script type="text/javascript" src="scripts.js">&lt;/script>
+  &lt;/body>
+&lt;/html></code></pre>
+      
+      Le fichier externe doit être enregistré avec l'extension de fichier « .js ». Il n'est pas nécessaire d'ajouter les balises « <code>&lt;script></code> » à l'intérieur du fichier.
+
+    </section>
+
+    <section class="slide small-type" data-markdown data-toc>
+      <script type="text/template">
+        # La suite
+        
+        * Découvrez les autres ateliers de Ladies Learning Code en suivant notre [feuille de route](http://ladieslearningcode.com/roadmap/).
+        * Liste de [JSbooks gratuits en ligne, en anglais](http://jsbooks.revolunet.com/)
+        * Tutoriels et ressources de JavaScript du [Mozilla Developer Network](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+      </script>
+    </section>
+    
+    <!-- Dernière diapositive -->
+    <section class="slide last">
+      <h1>Merci!</h1>
+      <h2 class="heading-bg">
+        <span>Introduction au<br> JavaScript</span>
+      </h2>  
+
+      <!-- <img class="instructor" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="nom du formateur">
+      <h2><span class="cursive">avec</span> nom du formateur</h2>
+      <ul>
+        <li><a href="mailto:">allo@courriel.com</a></li>
+        <li><a href="#">monsite.com</a></li>
+        <li><a href="http://twitter.com/">@twitter</a></li>
+      </ul> -->
+
+      <p class="attribution">Illustrations par <a href="http://floridaelago.com/" target="_blank">Florida Elago</a>.<br>
+      Diaposities créées par <a href="http://christinatruong.com">Christina Truong</a> à partir de <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> et de <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+    </section>
+
+  </main><!-- section principale cls -->
+  
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Enlevez les commentaires des modules dont vous avez besoin -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="framework/scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Regroupe tous les extraits .snippet
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
+</html>

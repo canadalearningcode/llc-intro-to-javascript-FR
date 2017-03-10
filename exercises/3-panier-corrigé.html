@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Exemple de JavaScript!</title>
+    <script>
+      var prixChandail = 25;
+      var prixAndroid = 10;
+      var réduction = 0.15; // 15%
+
+      // Combien coûtent un chandail et un toutou Android?
+      var soustotal = prixChandail + prixAndroid;
+      document.write("Sous-total : " + soustotal + "$" + "<br>");
+
+      // Les membres de Ladies Learning Code profitent d'une réduction de 15 %!
+      // Essayez de trouver le montant de la réduction.
+      var montantRéduction = soustotal * réduction;
+      document.write("Réduction : " + montantRéduction + "$" + "<br>");
+
+      // Appliquez la réduction pour obtenir le total.
+      var total = soustotal - montantRéduction;
+      document.write("Total : " + total + "$");
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Mise à jour des quantités</title>
+    <link rel="stylesheet" href="exercices_fr.css">
+  </head>
+  <body>
+    
+    <div class="quantités">
+      <img src="assets/plush-android.jpg" width="195" height="195">
+      <br>
+      
+      <button id="ajouter">Ajouter</button>
+      <button id="enlever">Enlever</button>
+      <br>
+      
+      Quantity <input id="miseAJourQuantité" type="text" value="0">
+    </div>
+    
+    <script>
+      var quantité = 0; // déclare la propriété quantité et la fait commencer à 0
+      var miseAJourQuantité = document.getElementById("miseAJourQuantité"); // sélectionne l'élément HTML pour afficher la quantité
+      var boutonAjouter = document.getElementById("ajouter"); // sélectionne le bouton Ajouter du HTML
+      var boutonEnlever = document.getElementById("enlever"); // sélectionne le bouton Enlever du HTML
+
+      function ajouterObjet(){
+        quantité = quantité + 1; // ajoute 1 à la valeur actuelle de la quantité
+        miseAJourQuantité.value = quantité; // met à jour la quantité totale dans le HTML pour afficher la nouvelle valeur de quantité
+      }
+      function enleverObjet(){
+        quantité = quantité - 1; // soustrait 1 de la valeur actuelle de la quantité
+        miseAJourQuantité.value = quantité;// met à jour la quantité totale dans le HTML pour afficher la nouvelle valeur de quantité
+      }
+
+      // exécute les fonctions ajouterObjet() et enleverObjet() quand le bouton est cliqué
+      boutonAjouter.onclick = ajouterObjet;
+      boutonEnlever.onclick = enleverObjet;
+    </script>
+  </body>
+</html>

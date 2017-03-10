@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Mise à jour des quantités</title>
+    <link rel="stylesheet" href="exercices_fr.css">
+  </head>
+  <body>
+    
+    <div class="quantités">
+      <img src="assets/plush-android.jpg" width="195" height="195">
+      <br>
+      
+      <button id="Ajouter">Ajouter</button>
+      <button id="Enlever">Enlever</button>
+      <br>
+      
+      Quantité <input id="miseAJourQuantité" type="text" value="0">
+
+      <button id="caisse" class="boutonCaisse">caisse</button>
+    </div>
+    
+    <script>
+      var quantité = 0; // déclare la propriété quantité et la fait commencer à 0
+      var miseAJourQuantité = document.getElementById("miseAJourQuantité"); // sélectionne l'élément HTML pour afficher la quantité
+      var boutonAjouter = document.getElementById("Ajouter"); // sélectionne le bouton Ajouter du HTML
+      var boutonEnlever = document.getElementById("Enlever"); // sélectionne le bouton Enlever du HTML
+      var boutonCaisse = document.getElementById("Caisse"); // sélectionne le bouton Caisse du HTML
+
+      function ajouterObjet(){
+        quantité = quantité + 1; // ajoute 1 à la valeur actuelle de la quantité
+        miseAJourQuantité.value = quantité; // met à jour la quantité totale dans le HTML pour afficher la nouvelle valeur de quantité
+      }
+      function enleverObjet(){
+        if(quantité > 0) {
+          quantité = quantité - 1; // soustrait 1 de la valeur actuelle de la quantité
+        }
+        miseAJourQuantité.value = quantité;// met à jour la quantité totale dans le HTML pour afficher la nouvelle valeur de quantité
+      }
+      function caisse(){
+        if(quantité > 0) {
+          alert("Merci d'avoir passé une commande.");
+        } else {
+          alert("Vous ne pouvez pas passer à la caisse, car votre panier est vide.")
+        }
+      }
+
+      // exécute les fonctions quand le bouton est cliqué
+      boutonAjouter.onclick = ajouterObjet;
+      boutonEnlever.onclick = enleverObjet;
+      boutonCaisse.onclick = caisse;
+    </script>
+  </body>
+</html>
