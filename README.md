@@ -1,11 +1,11 @@
-#Ladies Learning Code
-##Intro to JavaScript
+# Ladies Learning Code
+## Intro to JavaScript
 
 A full day introductory to JavaScript workshop.
 
 ## Liens rapides
 
-Aperçu des diapositives : ladieslearningcode.github.io/llc-intro-to-javascript-FR/slides_fr.html
+Aperçu des diapositives : https://ladieslearningcode.github.io/llc-intro-to-javascript-FR/slides_fr.html 
 
 ##Sources
 
