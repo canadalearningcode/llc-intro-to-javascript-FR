@@ -233,7 +233,7 @@
 
         ## Java
 
-        ```
+        ```java
         Scanner userInput = new Scanner(System.in);
         String name;
         System.out.print("Comment t'appelles-tu? ");
@@ -242,7 +242,7 @@
         ```
 
         ## JavaScript
-        ```
+        ```javascript
         var nom;
         nom = window.prompt("Comment t'appelles-tu?",'');
         document.write("Bonjour, " + nom);
@@ -472,7 +472,7 @@
 
         Si l'action « déposer la carte sur le terminal » était une fonction en JavaScript, elle ressemblerait à ceci :
 
-        ```
+        ```javascript
         déposerCarte()
         ```
       </script>
@@ -504,7 +504,7 @@
 
         Les **instructions** sont des commandes indiquant à l'ordinateur quoi faire.
 
-        ```
+        ```javascript
         prompt("Bonjour, comment t'appelles-tu?");
         ```
       </script>
@@ -549,7 +549,7 @@
         <hr class="clear">
         Dans votre éditeur, ouvrez **1-bonjour.html** et ajoutez l'extrait de code suivant :
 
-        ```
+        ```javascript
         prompt("Comment t'appelles-tu?");
         ```
 
@@ -596,18 +596,18 @@
 
         Déclarez (créez) des variables avec le mot-clé `var` et donnez-leur un nom.
 
-        ```
+        ```javascript
         var prénom;
         ```
 
         Donnez une valeur à la variable à l'aide du symbole égal `=`. Souvenez-vous de fermer l'instruction avec un point-virgule. Maintenant, l'ordinateur se rappellera de notre nom!
 
-        ```
+        ```javascript
         prénom = "VotreNom";
         ```
         Il est aussi possible d'affecter une valeur à une variable et de nommer la variable en même temps.
 
-        ```
+        ```javascript
         var prénom = "VotreNom";
         ```
       </script>
@@ -621,12 +621,12 @@
 
         Cette fois-ci, la fonction s'attache à la page HTML, que l'on appelle le **document**.  Le texte affiché doit se trouver entre parenthèses.
 
-        ```
+        ```javascript
         document.write("bonjour"); // affiche « bonjour » sur la page
         ```
         La fonction peut aussi afficher la valeur de la variable. N'oubliez pas que la variable ne prend pas de guillemets.
 
-        ```
+        ```javascript
         var prénom = "VotreNom";
         document.write(prénom); // affiche « VotreNom » sur la page.
         ```
@@ -639,7 +639,7 @@
 
         L'exemple précédent démontrait comment donner une valeur précise à la variable `prénom`.
 
-        ```
+        ```javascript
         var prénom = "VotreNom";
         ```
 
@@ -680,7 +680,7 @@
 
         Retournez à **1-bonjour.html** et mettez à jour votre programme. Il devrait ressembler à ceci :
 
-        ```
+        ```javascript
         var prénom = prompt("Comment t'appelles-tu?");
         document.write("Bonjour ");
         document.write(prénom);
@@ -806,20 +806,20 @@
         Les variables peuvent contenir différents *types* de valeurs.
 
         Variables numériques (nombres entiers et décimales) :
-        ```
+        ```javascript
         var nombreEntier = 10;
         var uneDécimale = 10.5; // utiliser « . » plutôt que « , » pour les décimales
         ```
 
         Chaînes de caractères (lettres, chiffres, symboles), toujours entre guillemets :
-        ```
+        ```javascript
         var chaîneUnMot = "Bonjour";
         var chaînePhrase = "Bonjour, j'espère que vous allez bien!";
         var chaîneChiffres = "10";
         ```
 
         Variables booléennes (vrai et faux, *true et false* en anglais)
-        ```
+        ```javascript
         var nousSommesSamedi = true;
         var nousSommesDimanche = false;
         ```
@@ -888,7 +888,7 @@
       <script type="text/template">
         #Corrigé de l'exercice
 
-        ```
+        ```javascript
         // 1. Déclarez une variable pour enregistrer la valeur du nom.
         // 2. Déclarez une variable pour enregistrer la valeur du code postal.
         var nom = prompt("Comment vous appelez-vous?");
@@ -952,7 +952,7 @@
 
         Il y a 3 variables définies dans le fichier d'exercices :
 
-        ```
+        ```javascript
         var prixChandail = 25;
         var prixAndroid = 10;
         var réduction = 0.15; // 15%
@@ -1128,7 +1128,7 @@ function plusCoeurs(){
         #Les variables et les objets
 
         <img src="framework/img/workshop/variable-rice.png" alt="variable riz" class="left" height="130"> Une **variable** ne contient qu'une valeur.
-        ```
+        ```javascript
         var bouffeEmporter = "Riz frit";
         ```
         <br>
@@ -1220,7 +1220,7 @@ function plusCoeurs(){
 
         Par exemple, il est possible d'utiliser la méthode `toFixed()` pour définir le nombre de chiffres dans une décimale après la virgule (un point, en JavaScript)!
 
-        ```
+        ```javascript
         var prix = 25;
         var prixEnDollars = prix.toFixed(2);
         document.write(prixEnDollars + "$");
@@ -1229,7 +1229,7 @@ function plusCoeurs(){
 
         L'exemple ci-dessous fonctionne aussi. Voyez-vous la différence?
 
-        ```
+        ```javascript
         var prix = 25;
         document.write(prix.toFixed(2) + "$");
         ```
@@ -1247,7 +1247,7 @@ function plusCoeurs(){
 
         Supposons que vous voulez une réduction de 50 % sur vos achats. Tous les prix peuvent être multipliés par 50 % (ou divisés par 2), mais vous devez vous assurer que la valeur est toujours arrondie à deux chiffres après la virgule.
 
-        ```
+        ```javascript
         var réduction = 0.5; // réduction de 50%
         var chandail = 20 * réduction;
         var android = 35 * réduction;
@@ -1318,7 +1318,7 @@ function plusCoeurs(){
 
         Les méthodes peuvent être appliquées à ces **objets** à l'aide de la notation avec un point. Ça ne vous rappelle pas quelque chose?
 
-        ```
+        ```javascript
         document.write();
         ```
 
@@ -1336,10 +1336,10 @@ function plusCoeurs(){
 
         Pour ce faire, vous aurez besoin d'ajouter un attribut `id` au HTML :
 
-        ```
+        ```html
         <div id="miseAJour">0</div>
         ```
-        ```
+        ```javascript
         document.getElementById("miseAJour");
         ```
         Cela signifie que la méthode cherchera les éléments HTML ayant l'attribut `id` dans le document. Vous pouvez utiliser cette méthode pour modifier directement le HTML!
@@ -1352,13 +1352,13 @@ function plusCoeurs(){
 
         Regardons le bouton "coeurs" à nouveau, cette fois, avec le HTML.
 
-        ```
+        ```html
         <button id="boutonPlus">
           <img src="framework/img/workshop/llc-logo.png"> Coeur!
           <span id="miseAJour">0</span>
         </button>
         ```
-        ```
+        ```javascript
         // commence à 0
         var coeurs = 0;
         // cible l'élément "miseAJour"
@@ -1404,7 +1404,7 @@ function plusCoeurs(){
 
         Les instructions à exécuter doivent se trouver à l'intérieur d'accolades `{}`.
 
-        ```
+        ```javascript
         function nomDeLaFonction(){
           // instructions à exécuter
         }
@@ -1574,7 +1574,7 @@ function plusCoeurs(){
         ![](framework/img/workshop/update-quantities.png) <!-- .element: class="left" height="340" -->
 
         Dans le HTML, la balise `<input>` affiche la valeur de la quantité.
-        ```
+        ```html
         <input type="text" value="0">
         ```
 
@@ -1637,13 +1637,13 @@ function plusCoeurs(){
         ---
         Dans l'étape précédente, nous avons sélectionné l'élément HTML pour afficher la valeur de la quantité.
 
-        ```
+        ```javascript
         var miseAJourQuantité = document.getElementById('miseAJourQuantité');
 
         ```
 
         Toutefois, la variable `quantité` contient la valeur de la quantité.
-        ```
+        ```javascript
         var quantité = 0;
         ```
 
@@ -1667,7 +1667,7 @@ function plusCoeurs(){
 
         Nous pouvons faire la même chose ici en utilisant la propriété `.value` (« valeur ») pour définir la valeur de `miseAJourQuantité`.
 
-        ```
+        ```javascript
         var quantité = 0;
         var miseAJourQuantité = document.getElementById('miseAJourQuantité');
 
@@ -1677,7 +1677,7 @@ function plusCoeurs(){
 
         La quantité doit être mise à jour chaque fois que l'utilisateur ajoute ou enlève un objet. Mettez à jour les fonctions `ajouterObjet()` et `enleverObjet()` en y ajoutant l'instruction miseAJourQuantité.
 
-        ```
+        ```javascript
         var quantité = 0;
         var miseAJourQuantité = document.getElementById('miseAJourQuantité');
 
@@ -1705,10 +1705,10 @@ function plusCoeurs(){
 
         Comme avec la boîte de quantités du HTML, nous pouvons sélectionner le bouton « Ajouter » en ajoutant un attribut `id` et en utilisant `getElementById`.
 
-        ```
+        ```html
         <button id="ajouter">Ajouter</button>
         ```
-        ```
+        ```javascript
         var ajouterBouton = document.getElementById("ajouter");
         ```
 
@@ -1732,7 +1732,7 @@ function plusCoeurs(){
 
         Pour exécuter la fonction `ajouterObjet()` et l'enclencher quand le bouton est cliqué, faites-ceci :
 
-        ```
+        ```javascript
         ajouterBouton.onclick = ajouterObjet;
         ```
 
@@ -1779,7 +1779,7 @@ function plusCoeurs(){
 
         En JavaScript, une instruction conditionnelle ressemble à ceci :
 
-        ```
+        ```javascript
         if ( temps === pluie ) {
           sortirParapluie();
         }
@@ -1822,7 +1822,7 @@ function plusCoeurs(){
 
         Le mot-clé `else` (« sinon ») désigne une instruction passe-partout exécutée au cas où la condition n'est pas satisfaite.
 
-        ```
+        ```javascript
         if ( temps == pluie ) {
             sortirParapluie();
         } else {
@@ -1838,7 +1838,7 @@ function plusCoeurs(){
 
         Allez encore plus loin en ajoutant « sinon, si » (`else if`) pour mettre encore plus de conditions, autant que vous le souhaitez.
 
-        ```
+        ```javascript
         if ( temps == pluie ) {
           sortirParapluie();
         } else if ( temps == neige ) {
