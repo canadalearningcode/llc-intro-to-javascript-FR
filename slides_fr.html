@@ -25,20 +25,22 @@
       <div class="instructions">
         <!-- AJOUTEZ LES INFORMATIONS À PROPOS DU WI-FI -->
         <!-- <h2>Branchez-vous</h2>
-        <p><strong>Wi-Fi :</strong> réseau wi-fi</p>
-        <p><strong>Mot de passe :</strong> mot de passe wi-fi</p>
+        <ul>
+          <li><strong>Wi-Fi :</strong> réseau wi-fi</li>
+          <li><strong>Mot de passe :</strong> mot de passe wi-fi</li>
+        </ul>
         <hr> -->
 
         <h2>Téléchargez<br> et installez</h2>
         <ol class="downloads">
-          <li>Fichiers de l'apprenant (dossier zip): <a href="https://github.com/ladieslearningcode/llc-intro-to-javascript-FR/archive/master.zip">http://bit.ly/llc-javascript-fr</a>
+          <li>Fichiers de l'apprenant (dossier zip): <a href="https://github.com/ladieslearningcode/llc-intro-to-javascript-FR/archive/master.zip">bit.ly/llc-javascript-fr</a>
             <ul>
               <li>dézippez le dossier de l'apprenant (<em>Extraire tout</em> si vous utilisez Windows)</li>
-              <li>Ouvrez <em>slides_fr.html</em> dans le navigateur pour afficher les diapositives</li>
+              <li>Ouvrez <code>slides_fr.html</code> dans le navigateur pour afficher les diapositives</li>
             </ul>
           </li>
-          <li>Éditeur Atom : <a href="http://atom.io">http://atom.io</a></li>
-          <li>Navigateur Chrome: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a></li>
+          <li>Éditeur Atom : <a href="http://atom.io">atom.io</a></li>
+          <li>Navigateur Chrome: <a href="https://www.google.ca/chrome/browser/desktop/">google.ca/chrome</a></li>
           </li>
         </ol>
       </div>
@@ -120,7 +122,7 @@
 
         ---
         ###Ressource :
-        Pour plus d'informations à propos des navigateurs : http://browsehappy.com
+        Pour plus d'informations à propos des navigateurs : [browsehappy.com](http://browsehappy.com)
       </script>
     </section>
 
@@ -128,10 +130,10 @@
       <script type="text/template">
         # Éditeur de code
 
-        Il y a de nombreuses options gratuites et payantes. Dans cet atelier, nous utiliserons [Atom](https://atom.io/). Si vous ne pouvez pas télécharger Atom, vous pouvez aussi utiliser [Brackets](http://brackets.io/).
+        Il y a de nombreuses options gratuites et payantes. Dans cet atelier, nous utiliserons [Atom](https://atom.io/). Si vous ne pouvez pas télécharger Atom, vous pouvez aussi utiliser [VS Code](https://code.visualstudio.com/).
 
         [![Logo d'Atom](framework/img/workshop/atom-logo.png)](https://atom.io/)
-        [![Logo de Brackets](framework/img/workshop/brackets-logo.png)](http://brackets.io/)
+        [![Logo de VS Code](framework/img/workshop/vs-code-logo.png)](https://code.visualstudio.com/)
       </script>
     </section>
 
@@ -148,13 +150,13 @@
           |-- slides_fr.html // Le fichier que vous lisez en ce moment!
         ```
 
-        Ouvrez le dossier **exercises** dans l'éditeur de texte pour accéder aux fichiers.
+        Ouvrez le dossier `exercises` dans l'éditeur de texte pour accéder aux fichiers.
         Allez dans **File** > ** Add Project Folder**. Une fenêtre apparaîtra.
 
-        ![](framework/img/workshop/editor-add-project-1.jpg)
+        ![Éditeur Atom avec menu Fichier ouvert sur Mac. L'option Ajouter un dossier de projet est en surbrillance.](framework/img/workshop/editor-add-project-1.jpg)
 
-        * Ensuite, naviguez jusqu'au dossier **llc-intro-to-javascript-master-fr**
-        * Sélectionnez le dossier **exercises** et cliquez sur **Open**
+        * Ensuite, naviguez jusqu'au dossier `llc-intro-to-javascript-master-fr`
+        * Sélectionnez le dossier `exercises` et cliquez sur **Open**
 
         Le dossier apparaîtra maintenant dans la barre latérale. Cliquez sur l'icône de flèche pour voir les fichiers qu'il contient.
       </script>
@@ -166,20 +168,20 @@
 
         L'utilisation d'un bon éditeur de texte et l'apprentissage de ses fonctions rendront votre tâche beaucoup plus agréable. Tout d'abord, mettons à jour l'option d'habillage de texte (soft wrap) pour nous permettre de mieux lire les longs blocs de code et de texte.
 
-        Allez dans **Preferences** pour ouvrir les options de personnalisation.
+        1. Allez dans **Preferences** pour ouvrir les options de personnalisation.
 
-        ![](framework/img/workshop/atom-preferences.jpg)<!-- .element: width="70%" -->
+          ![Éditeur Atom avec menu Atom ouvert sur Mac](framework/img/workshop/atom-preferences.jpg)<!-- .element: width="70%" -->
 
-        L'onglet **Settings** (paramètres) s'affiche par défaut. Descendez pour voir l'option d'habillage de texte **Soft Wrap**.
+        2. L'onglet **Settings** (paramètres) s'affiche par défaut. Descendez pour voir l'option d'habillage de texte **Soft Wrap**.
 
-        ![](framework/img/workshop/atom-settings.jpg)<!-- .element: width="70%" -->
+          ![Écran des paramètres de l'éditeur Atom](framework/img/workshop/atom-settings.jpg)<!-- .element: width="70%" -->
 
-        Assurez-vous que la case **Soft Wrap** est cochée.
+        3. Assurez-vous que la case **Soft Wrap** est cochée.
 
-        ![](framework/img/workshop/atom-soft-wrap.jpg)<!-- .element: width="70%" -->
+          ![Écran des paramètres de l'éditeur Atom, la case Soft Wrap est cochée](framework/img/workshop/atom-soft-wrap.jpg)<!-- .element: width="70%" -->
 
-       ---
-        ###Ressources (en anglais)
+        ---
+        ## Ressources (en anglais)
 
         *   [Documentation d'Atom](https://atom.io/docs)
         *   [Raccourcis Atom](https://bugsnag.com/blog/atom-editor-cheat-sheet)
@@ -203,7 +205,7 @@
         C'est un langage de programmation.<!-- .element: class="delayed" -->
 
         Un programme est un ensemble de directives à faire exécuter par un ordinateur.  Les ordinateurs sont rapides, mais aveugles.<br><br><!-- .element: class="delayed" -->
-        ![rawbot computers](framework/img/workshop/rawbot-computers.png)<!-- .element: style="height:45vh;" -->
+        ![](framework/img/workshop/rawbot-computers.png)<!-- .element: style="height:45vh;" -->
       </script>
     </section>
 
@@ -215,13 +217,13 @@
 
         Depuis l'époque du binaire, les ordinateurs ont beaucoup évolué. Nous les rejoignons à la moitié de leur parcours.
 
-        ![computer binary](framework/img/workshop/rawbot-binary.png) <!-- .element: style="height:30vh;" -->
+        ![](framework/img/workshop/rawbot-binary.png) <!-- .element: style="height:30vh;" -->
       </script>
     </section>
 
     <section class="slide title">
       <h1>Attention, exemple de code!!<br /><br />
-      <img src="framework/img/workshop/rawbot-face.png" alt="robot face" /></h1>
+      <img src="framework/img/workshop/rawbot-face.png" alt="" /></h1>
     </section>
 
     <section class="slide" data-markdown>
@@ -256,7 +258,7 @@
 
         Bien qu'ils se ressemblent, comme c'est le cas avec de nombreux langages de programmation, ces deux langages n'ont aucun lien.
 
-        ![java javascript](framework/img/workshop/java-javascript-rawbot.png)
+        ![](framework/img/workshop/java-javascript-rawbot.png)
 
         (Le Java était très populaire à l'époque de la création du JavaScript. Netscape a volé le nom.)<!-- .element: class="note" -->
       </script>
@@ -268,7 +270,7 @@
 
         Le C++, le Java, et le .NET sont aussi des langages de programmation. Toutefois, ils s'exécutent directement sur le système d'exploitation (p. ex. : Windows, Mac, Linux).
 
-        ![computer diagram](framework/img/workshop/computer-diagram-os-languages.gif)<!-- .element: style="height:55vh;width:auto;" -->
+        ![](framework/img/workshop/computer-diagram-os-languages.gif)<!-- .element: style="height:55vh;width:auto;" -->
       </script>
     </section>
 
@@ -278,7 +280,7 @@
 
         Normalement, le JavaScript s'exécute dans un navigateur Web<br> (p. ex. : Safari, Firefox, Chrome, Internet Explorer).
 
-        ![javascript gears diagram](framework/img/workshop/javascript-gears.gif)<!-- .element: style="height:55vh;width:auto;" -->
+        ![](framework/img/workshop/javascript-gears.gif)<!-- .element: style="height:55vh;width:auto;" -->
       </script>
     </section>
 
@@ -286,7 +288,7 @@
       <script type="text/template">
         # Côté serveur et côté client
 
-        ![diagramme frontal et dorsal](framework/img/workshop/backend-front-end.gif)
+        ![](framework/img/workshop/backend-front-end.gif)
 
         On dit souvent que le **JavaScript** est un langage de programmation Web « frontal » ou _côté client_, car il est interprété par le navigateur Web.
       </script>
@@ -296,7 +298,7 @@
       <script type="text/template">
         # Côté serveur et côté client
 
-        ![diagramme d'ordinateur](framework/img/workshop/backend-front-end-server.gif)<!-- .element: width="62%" -->
+        ![](framework/img/workshop/backend-front-end-server.gif)<!-- .element: width="62%" -->
 
         De leur côté, les langages Java, .NET, PHP ou Ruby sont considérés des langages de programmation Web « *dorsaux* » ou _côté serveur_, puisque le code est compilé et exécuté par le système d'exploitation d'un ordinateur agissant comme serveur pour des pages Web.
       </script>
@@ -306,7 +308,7 @@
       <script type="text/template">
         # Côté serveur ou côté client: vérification facile
 
-        ![diagramme d'ordinateur](framework/img/workshop/llcodedotcom_viewsource.gif)<!-- .element: class="left" -->
+        ![](framework/img/workshop/llcodedotcom_viewsource.gif)<!-- .element: class="left" -->
 
         Sur *n'importe quelle* page Web, faites un *clic droit* sur la page et cliquez sur *Afficher le code source* pour voir le code du côté client. Ce code comprend le JavaScript ainsi que le HTML et le CSS. (Essayez-le vous-même!)
 
@@ -322,7 +324,7 @@
 
         Le **JavaScript** est conçu pour modifier des pages Web écrites en **HTML**. Il fonctionne aux côtés du **CSS**.
 
-        ![diagramme html trio du web](framework/img/workshop/web-triad-html.png)
+        ![](framework/img/workshop/web-triad-html.png)
 
         Le **HTML** (Hypertext Markup Language) est un langage de balisage.
 
@@ -336,7 +338,7 @@
 
         Le **JavaScript** est conçu pour modifier des pages Web écrites en **HTML**. Il fonctionne aux côtés du **CSS**.
 
-        ![diagramme css trio du web](framework/img/workshop/web-triad-css.png)
+        ![](framework/img/workshop/web-triad-css.png)
 
         Le **CSS** (Cascading Style Sheets) est un langage de feuilles de style.
 
@@ -350,7 +352,7 @@
 
         Le **JavaScript** est conçu pour modifier des pages Web écrites en **HTML**. Il fonctionne aux côtés du **CSS**.
 
-        ![diagramme javascript trio du web](framework/img/workshop/web-triad-javascript.gif)
+        ![](framework/img/workshop/web-triad-javascript.gif)
 
         Le **JavaScript** est un langage de programmation.
 
@@ -364,7 +366,7 @@
 
         Habituellement, le JavaScript s'exécute de la même façon dans des navigateurs différents.
 
-        ![guerre des navigateurs](framework/img/workshop/browser-war-illustration.jpg)<!-- .element: class="left" width="50%" -->
+        ![Navigateurs Web représentés par des enfants; Chrome se battant avec Firefox, Internet Explorer reste seul à manger de la colle.](framework/img/workshop/browser-war-illustration.jpg)<!-- .element: class="left" width="50%" -->
 
         Toutefois, les navigateurs sont des logiciels développés par de nombreuses entreprises et personnes différentes. Il y a donc parfois quelques différences dans leur fonctionnement.
 
@@ -387,8 +389,12 @@
         (N'oubliez pas d'activer le JavaScript de nouveau!!!)<!-- .element: class="note" -->
 
         ---
-        ###Ressource
-        Voici comment accéder aux paramètres du JavaScript : Paramètres (dans le menu du navigateur) > Afficher les paramètres avancés... (lien) > Paramètres de contenu (bouton, sous Confidentialité)
+        ## Conseil de pro!
+        Voici comment accéder aux paramètres du JavaScript :
+
+        1. Paramètres (dans le menu du navigateur)
+        2. Afficher les paramètres avancés... (lien)
+        3. Paramètres de contenu (bouton, sous Confidentialité)
       </script>
     </section>
 
@@ -400,7 +406,7 @@
 
         Pensez à un touriste qui vous approche pour retrouver son chemin. Plus vos directives sont claires, plus le touriste a de chances d'arriver à destination.
 
-        ![rawbot directions](framework/img/workshop/rawbot-directions.png) <!-- .element: style="height:50vh;" -->
+        ![](framework/img/workshop/rawbot-directions.png) <!-- .element: style="height:50vh;" -->
       </script>
     </section>
 
@@ -412,13 +418,13 @@
 
         <ol>
           <li class="delayed">
-            <img src="framework/img/workshop/name-text-rawbot.gif" alt="taper mon nom"> Laisse-moi taper mon nom.
+            <img src="framework/img/workshop/name-text-rawbot.gif" alt=""> Laisse-moi taper mon nom.
           </li>
           <li class="delayed">
-            <img src="framework/img/workshop/remember-name-rawbot.gif" alt="souviens-toi"> Souviens-toi de mon nom.
+            <img src="framework/img/workshop/remember-name-rawbot.gif" alt=""> Souviens-toi de mon nom.
           </li>
           <li class="delayed">
-            <img src="framework/img/workshop/say-my-name-rawbot.png" alt="dis bonjour"> Dis-moi « bonjour » et répète mon nom.
+            <img src="framework/img/workshop/say-my-name-rawbot.png" alt=""> Dis-moi « bonjour » et répète mon nom.
           </li>
         </ol>
       </script>
@@ -488,7 +494,9 @@
 
         Cliquez sur « Run » (Exécuter) ci-dessous pour voir ce qui se passe quand la fonction `prompt()` est exécutée.
 
-        <img onclick="prompt()" src="framework/img/workshop/rawbot-run.png" alt="exécuter le code">
+        <button type="button" class="btn-image" onclick="prompt()">
+          <img src="framework/img/workshop/rawbot-run.png" alt="exécuter le code">
+        </button>
       </script>
     </section>
 
@@ -534,7 +542,7 @@
 &lt;/html></code></pre>
 
         ---
-        ###Conseil de pro!
+        ## Conseil de pro!
 
         En mettant le JavaScript *avant* la balise de fermeture `</body>`, la page pourra se charger avant d'exécuter le JavaScript. C'est un détail important auquel penser en manipulant des éléments HTML.
       </script>
@@ -544,16 +552,16 @@
       <script type="text/template">
         #Exercice de groupe : Say My Name, première partie
 
-        <img src="framework/img/workshop/name-text-rawbot.gif" alt="taper mon nom" style="height: 80px;" class='left'> Laisse-moi taper mon nom
+        <img src="framework/img/workshop/name-text-rawbot.gif" alt="" style="height: 80px;" class='left'> Laisse-moi taper mon nom
 
         <hr class="clear">
-        Dans votre éditeur, ouvrez **1-bonjour.html** et ajoutez l'extrait de code suivant :
+        **Dans votre éditeur**, ouvrez `1-bonjour.html` et ajoutez l'extrait de code suivant :
 
         ```
         prompt("Comment t'appelles-tu?");
         ```
 
-        Ensuite, ouvrez **1-bonjour.html** dans le navigateur et essayez la fonction « prompt ».
+        Ensuite, ouvrez `1-bonjour.html` **dans le navigateur** et essayez la fonction « prompt ».
       </script>
     </section>
 
@@ -565,7 +573,7 @@
 
         La fonction `prompt()` peut être utilisée pour obtenir du texte de l'utilisateur, mais l'ordinateur ne se souviendra de rien si vous ne le lui demandez pas.
 
-        ![robot losing memory](framework/img/workshop/rawbot-losing-memory.png) <!-- .element: class="right" -->
+        ![](framework/img/workshop/rawbot-losing-memory.png) <!-- .element: class="right" -->
 
         Il a besoin de directives *exactes*.
 
@@ -668,7 +676,7 @@
           </li>
         </ol>
 
-        Revenons à <!-- .element: class="delayed" --> **1-bonjour.html** et mettons à jour notre programme.
+        Revenons à <!-- .element: class="delayed" --> `1-bonjour.html` et mettons à jour notre programme.
       </script>
     </section>
 
@@ -678,7 +686,7 @@
 
         La troisième et dernière partie consiste à demander à l'ordinateur de répéter notre nom. Utilisez la fonction `document.write()` pour lui faire dire « bonjour » et répéter la variable de nom.
 
-        Retournez à **1-bonjour.html** et mettez à jour votre programme. Il devrait ressembler à ceci :
+        Retournez à `1-bonjour.html` et mettez à jour votre programme. Il devrait ressembler à ceci :
 
         ```
         var prénom = prompt("Comment t'appelles-tu?");
@@ -711,7 +719,7 @@
       <script type="text/template">
         #Le projet du jour!
 
-        ![site web planète robots](framework/img/workshop/planet-robot-website.png)<!-- .element: class="left" -->
+        ![Page d'accueil du projet: magasin Planet Robots présentant des articles à l'achat, le total du panier et le formulaire d'informations sur l'expédition.](framework/img/workshop/planet-robot-website.png)<!-- .element: class="left" -->
 
         En tant que propriétaire du site populaire *Planet Robots*, vous souhaitez avoir un site Web aux fonctionnalités parfaites.
       </script>
@@ -766,9 +774,9 @@
 
         Utilisez un nom de variable descriptif :
 
-        `var prénom;` ← Il est évident que la variable enregistre le prénom.
-        `var fn;` ← Pas aussi évident que « prénom ».
-        `var x;` ← Incompréhensible.
+        - `var prénom;` ← Il est évident que la variable enregistre le prénom.
+        - `var fn;` ← Pas aussi évident que « prénom ».
+        - `var x;` ← Incompréhensible.
       </script>
     </section>
 
@@ -780,7 +788,7 @@
 
         Dans un formulaire d'achat en ligne, il faut entrer son nom et son adresse pour l'expédition. Les variables servent à enregistrer ces informations, qui seront ensuite utilisées pour créer des étiquettes d'expédition.
 
-        ![exemple livraison](framework/img/workshop/var-shipping-example.jpg)
+        ![Formulaire de saisie des données d’information d’expédition comprenant: le nom, l’adresse, la ville et le code postal. Les données sont utilisées pour générer une étiquette d'expédition imprimable.](framework/img/workshop/var-shipping-example.jpg)
       </script>
     </section>
 
@@ -794,8 +802,8 @@
 
         `var total = 1 + 1` signifie :
 
-        * _évaluer_ tout ce qui est à _droite_ du symbole égal (`1 + 1`)
-        * puis _affecter_ cette valeur (`2`) à la variable du _côté_ gauche.
+        1. _évaluer_ tout ce qui est à _droite_ du symbole égal (`1 + 1`)
+        2. puis _affecter_ cette valeur (`2`) à la variable du _côté_ gauche.
       </script>
     </section>
 
@@ -873,7 +881,7 @@
 
         Obtenons quelques informations de base pour la livraison.
 
-        Ouvrez **2-infos-expédition.html** dans l'éditeur et dans le navigateur.
+        Ouvrez `2-infos-expédition.html` dans l'éditeur et dans le navigateur.
 
         En ce moment, si vous exécutez le programme dans le navigateur, les informations d'expédition ne sont pas enregistrées et rien n'est affiché.
 
@@ -902,7 +910,7 @@
         document.write(codePostal); // affiche le code postal
         ```
 
-        Le corrigé se trouve également dans le fichier <!-- .element: class="note" --> **2-infos-expédition-corrigé.html**.
+        Le corrigé se trouve également dans le fichier <!-- .element: class="note" --> `2-infos-expédition-corrigé.html`.
       </script>
     </section>
 
@@ -948,7 +956,7 @@
       <script type="text/template">
         #Exercice : Total du panier (10 minutes)
 
-        Ouvrez **3-panier.html** dans votre éditeur.
+        Ouvrez `3-panier.html` dans votre éditeur.
 
         Il y a 3 variables définies dans le fichier d'exercices :
 
@@ -1035,11 +1043,11 @@
       <script type="text/template">
         #Exercice : Concaténation (10 minutes)
 
-        Retournez dans **3-panier.html** et mettez à jour les valeurs de `document.write()` pour combiner les valeurs des variables avec les chaînes.
+        Retournez dans `3-panier.html` et mettez à jour les valeurs de `document.write()` pour combiner les valeurs des variables avec les chaînes.
 
 
         ---
-        Le corrigé se trouve aussi dans le fichier <!-- .element: class="note" --> **3-panier-corrigé.html**.
+        Le corrigé se trouve aussi dans le fichier <!-- .element: class="note" --> `3-panier-corrigé.html`.
 
       </script>
     </section>
@@ -1072,7 +1080,7 @@
       Quand est-il pratique de réaffecter des valeurs? Cliquez sur ce bouton :
 
       <button id="plusCoeurs">
-        <img src="framework/img/workshop/llc-logo.png"> Coeur!
+        <img src="framework/img/workshop/llc-logo.png" alt=""> Coeur!
         <span id="miseAJour">0</span>
       </button>
 
@@ -1083,7 +1091,7 @@
 
         function plusCoeurs(){
           coeurs = coeurs + 1;
-          miseAJour.innerHTML = coeurs;
+          miseAJour.textContent = coeurs;
         }
         bouton.onclick = plusCoeurs;
         //https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -1096,7 +1104,7 @@ var miseAJour = document.getElementById('miseAJour'); // élément HTML mis à j
 // fonction personnalisée, convient des instructions pour mettre à jour le total
 function plusCoeurs(){
   coeurs = coeurs + 1; // prend la valeur actuelle de « coeurs » et lui ajoute 1
-  miseAJour.innerHTML = coeurs; // met à jour l'élément HTML selon la valeur actuelle de « coeurs »
+  miseAJour.textContent = coeurs; // met à jour l'élément HTML selon la valeur actuelle de « coeurs »
 }</code></pre>
     </section>
 
@@ -1116,7 +1124,7 @@ function plusCoeurs(){
 
         ```javascript
         var miseAJour = document.getElementById('miseAJour');
-        miseAJour.innerHTML = coeurs;
+        miseAJour.textContent = coeurs;
         ```
 
         Parlons d'abord des objets.
@@ -1127,14 +1135,14 @@ function plusCoeurs(){
       <script type="text/template">
         #Les variables et les objets
 
-        <img src="framework/img/workshop/variable-rice.png" alt="variable riz" class="left" height="130"> Une **variable** ne contient qu'une valeur.
+        <img src="framework/img/workshop/variable-rice.png" alt="Conteneur de riz." class="left" height="130"> Une **variable** ne contient qu'une valeur.
         ```
         var bouffeEmporter = "Riz frit";
         ```
         <br>
         Un **objet** contient un ensemble de valeurs et utilise une syntaxe différente.
 
-        <img class="left" width="500" src="framework/img/workshop/object-bento-box.png" alt="objet boîte bento">
+        <img class="left" width="500" src="framework/img/workshop/object-bento-box.png" alt="Boîte à bento avec: un contenant Teriyaki, un contenant Tempura, un contenant pour salade aux algues et un contenant pour rouleau d’avocat au saumon.">
 
         ```javascript
         // crée un nouvel objet
@@ -1235,8 +1243,8 @@ function plusCoeurs(){
         ```
 
         ---
-        ### Ressources
-        * [*Is everything in JavaScript an Object? - en anglais](https://blog.simpleblend.net/is-everything-in-javascript-an-object/)
+        ## Ressources
+        * [JavaScript values: not everything is an object - en anglais](https://2ality.com/2011/03/javascript-values-not-everything-is.html)
         * [La méthode toFixed() et d'autres méthodes en JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number/toFixed)
       </script>
     </section>
@@ -1260,9 +1268,9 @@ function plusCoeurs(){
 
         Sortie actuelle de ces fonctions : 10, 17.5 et 12.995.
 
-        Dans l'éditeur et le navigateur, ouvrez **4-méthodes.html**. Utilisez la méthode `toFixed()` pour mettre à jour la sortie des valeurs.
+        Dans l'éditeur et le navigateur, ouvrez `4-méthodes.html`. Utilisez la méthode `toFixed()` pour mettre à jour la sortie des valeurs.
 
-        <!-- .element: class="note" -->Vous trouverez le corrigé dans le fichier **4-méthodes-corrigé.html**.
+        <!-- .element: class="note" -->Vous trouverez le corrigé dans le fichier `4-méthodes-corrigé.html`.
       </script>
     </section>
 
@@ -1286,7 +1294,7 @@ function plusCoeurs(){
 
         Essayez d'imaginer qu'une page Web en HTML (le **document** dans le navigateur) est composée de plusieurs blocs.
 
-        ![blocs du navigateur](framework/img/workshop/browser-blocks.jpg)
+        ![Page d'accueil du projet: Planet Robots avec les sections de page décrites: titre de la page, articles à acheter et formulaires.](framework/img/workshop/browser-blocks.jpg)
       </script>
     </section>
 
@@ -1296,7 +1304,7 @@ function plusCoeurs(){
 
         Certains blocs sont définis par le navigateur, comme la *fenêtre* du navigateur et le *document*.
 
-        ![fenêtre du navigateur](framework/img/workshop/browser-window.jpg)
+        ![Page d'accueil du projet: Planet Robots avec la page entière décrite.](framework/img/workshop/browser-window.jpg)
       </script>
     </section>
 
@@ -1306,7 +1314,7 @@ function plusCoeurs(){
 
         Il y a aussi des blocs que nous créons nous-mêmes avec des balises HTML (p. ex. : `<div>`, `<img>`, etc).
 
-        ![blocs du navigateur](framework/img/workshop/browser-fieldset-div.jpg)
+        ![Page d'accueil du projet: Planet Robots avec les sections de page décrites: total du panier, formulaire d'expédition et barre latérale.](framework/img/workshop/browser-fieldset-div.jpg)
       </script>
     </section>
 
@@ -1354,7 +1362,7 @@ function plusCoeurs(){
 
         ```
         <button id="boutonPlus">
-          <img src="framework/img/workshop/llc-logo.png"> Coeur!
+          <img src="framework/img/workshop/llc-logo.png" alt=""> Coeur!
           <span id="miseAJour">0</span>
         </button>
         ```
@@ -1370,8 +1378,8 @@ function plusCoeurs(){
         function plusCoeurs(){
           // ajoute 1 au total actuel
           coeurs = coeurs + 1;
-          // applique la méthode .innerHTML au total de l'élément miseAJour
-          miseAJour.innerHTML = coeurs;
+          // applique la méthode .textContent au total de l'élément miseAJour
+          miseAJour.textContent = coeurs;
         }
 
         // quand le bouton est cliqué, il exécute la fonction personnalisée plusCoeurs()
@@ -1435,15 +1443,17 @@ function plusCoeurs(){
 
     <section class="slide exercise">
         <h1>Mettre à jour les quantités</h1>
-        <div class="quantité">
-          <img src="exercises/assets/plush-android.jpg" width="195" height="195">
+        <div class="quantities">
+          <img src="exercises/assets/plush-android.jpg" width="195" height="195" alt="Peluche verte Google Android.">
           <br>
 
           <button id="ajouter">ajouter</button>
           <button id="enlever">enlever</button>
           <br>
 
-          Quantité <input type="text" id="miseAJourQuantité" value="0">
+          <label>
+            Quantité <input type="text" id="miseAJourQuantité" value="0">
+          </label>
         </div>
 
         <p>Afin de mettre en pratique tous nos apprentissages de la journée, créons un programme qui permettra au client de mettre à jour la quantité d'objets en cliquant un bouton Ajouter ou Enlever, comme dans l'exemple en haut à gauche.</p>
@@ -1490,7 +1500,7 @@ function plusCoeurs(){
         1. Exécutez les instructions du bouton Enlever quand le bouton Enlever est cliqué.
 
 
-        Ouvrez le fichier **5-mise-a-jour-quantité.html** dans l'éditeur. Faisons chaque étape en grand groupe.
+        Ouvrez le fichier `5-mise-a-jour-quantité.html` dans l'éditeur. Faisons chaque étape en grand groupe.
       </script>
     </section>
 
@@ -1753,7 +1763,7 @@ function plusCoeurs(){
 
         **Attention!** En essayant le bouton Enlever, après avoir atteint la valeur 0, le compteur affichera des chiffres négatifs. Nous allons y remédier dans la prochaine section.
 
-        Vous trouverez le corrigé pour ce programme en entier dans le fichier <!-- .element: class="note" -->**mise-a-jour-quantité-corrigé.html**.
+        Vous trouverez le corrigé pour ce programme en entier dans le fichier <!-- .element: class="note" --> `mise-a-jour-quantité-corrigé.html`.
       </script>
     </section>
 
@@ -1853,46 +1863,50 @@ function plusCoeurs(){
     <section class="slide">
       <h1>Résumé des instructions conditionnelles</h1>
       <table cellpadding="20" style="width:100%">
-        <tr>
-          <td><h3>Instruction If</h3></td>
-          <td><h3>Instruction If...else</h3></td>
-          <td><h3>Instruction If...else If...else </h3></td>
-        </tr>
-        <tr>
-          <td valign="top">
-            <div data-markdown>
-              ```javascript
-              if (condition) {
-                // si la condition est satisfaite, faire quelque chose
-              }
-              ```
-            </div>
-          </td>
-          <td valign="top">
-            <div data-markdown>
-              ```javascript
-              if (condition) {
-                // si la condition est satisfaite, faire quelque chose
-              } else {
-                // sinon, faire autre chose
-              }
-              ```
-            </div>
-          </td>
-          <td valign="top">
-            <div data-markdown>
-              ```javascript
-              if (condition) {
-                // si la condition est satisfaite, faire quelque chose
-              } else if (condition2) {
-                // sinon, si la condition 2 est satisfaite, faire quelque chose
-              } else {
-                // sinon, faire autre chose
-              }
-              ```
-            </div>
-          </td>
-        </tr>
+        <thead>
+          <tr>
+            <th scope="col">Instruction If</h3></th>
+            <th scope="col">Instruction If...else</h3></th>
+            <th scope="col">Instruction If...else If...else </h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td valign="top">
+              <div data-markdown>
+                ```javascript
+                if (condition) {
+                  // si la condition est satisfaite, faire quelque chose
+                }
+                ```
+              </div>
+            </td>
+            <td valign="top">
+              <div data-markdown>
+                ```javascript
+                if (condition) {
+                  // si la condition est satisfaite, faire quelque chose
+                } else {
+                  // sinon, faire autre chose
+                }
+                ```
+              </div>
+            </td>
+            <td valign="top">
+              <div data-markdown>
+                ```javascript
+                if (condition) {
+                  // si la condition est satisfaite, faire quelque chose
+                } else if (condition2) {
+                  // sinon, si la condition 2 est satisfaite, faire quelque chose
+                } else {
+                  // sinon, faire autre chose
+                }
+                ```
+              </div>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </section>
 
@@ -1901,65 +1915,73 @@ function plusCoeurs(){
         #Opérateurs logiques et de comparaison
 
         <table cellspacing="0" class="comparison-table" style="margin-right:2%;width:52%;">
-          <tr>
-            <th align="left" colspan="3">Opérateurs de comparaison</th>
-          </tr>
-          <tr>
-            <td width="15%">==</td>
-            <td width="41%">est égal à</td>
-            <td width="44%">dix == deux * 5</td>
-          </tr>
-           <tr>
-            <td width="15%">===</td>
-            <td width="41%">est exactement égal à (tant en valeur qu'en type) </td>
-            <td width="44%">dix === 10<br />dix === "10" (faux) </td>
-          </tr>
-           <tr>
-            <td width="15%">!=</td>
-            <td width="41%">n'est pas égal à</td>
-            <td width="44%">dix !== deux</td>
-          </tr>
-           <tr>
-            <td width="15%">&gt;</td>
-            <td width="41%">plus grand que</td>
-            <td width="44%">dix &gt; deux</td>
-          </tr>
+          <thead>
             <tr>
-            <td width="15%">&lt;</td>
-            <td width="41%">plus petit que</td>
-            <td width="44%">deux &lt; dix</td>
-          </tr>
+              <th scope="col" align="left" colspan="3">Opérateurs de comparaison</th>
+            </tr>
+          </thead>
+          <tbody>
             <tr>
-            <td width="15%">&gt;=</td>
-            <td width="41%">plus grand que ou égal à</td>
-            <td width="44%">dix &gt;= deux * 5<br />dix &gt;= deux * 5 + 1</td>
-          </tr>
-            <tr>
-            <td width="15%">&lt;=</td>
-            <td width="41%">plus petit que ou égal à</td>
-            <td width="44%">deux &lt;= dix<br />deux &lt;= 2 </td>
-          </tr>
+              <td width="15%">==</td>
+              <td width="41%">est égal à</td>
+              <td width="44%">dix == deux * 5</td>
+            </tr>
+             <tr>
+              <td width="15%">===</td>
+              <td width="41%">est exactement égal à (tant en valeur qu'en type) </td>
+              <td width="44%">dix === 10<br />dix === "10" (faux) </td>
+            </tr>
+             <tr>
+              <td width="15%">!=</td>
+              <td width="41%">n'est pas égal à</td>
+              <td width="44%">dix !== deux</td>
+            </tr>
+             <tr>
+              <td width="15%">&gt;</td>
+              <td width="41%">plus grand que</td>
+              <td width="44%">dix &gt; deux</td>
+            </tr>
+              <tr>
+              <td width="15%">&lt;</td>
+              <td width="41%">plus petit que</td>
+              <td width="44%">deux &lt; dix</td>
+            </tr>
+              <tr>
+              <td width="15%">&gt;=</td>
+              <td width="41%">plus grand que ou égal à</td>
+              <td width="44%">dix &gt;= deux * 5<br />dix &gt;= deux * 5 + 1</td>
+            </tr>
+              <tr>
+              <td width="15%">&lt;=</td>
+              <td width="41%">plus petit que ou égal à</td>
+              <td width="44%">deux &lt;= dix<br />deux &lt;= 2 </td>
+            </tr>
+          </tbody>
         </table>
 
         <table cellspacing="0" class="comparison-table" style="width:46%;">
-          <tr>
-            <th align="left" colspan="3">Opérateurs logiques</th>
-          </tr>
-          <tr>
-            <td width="15%">&amp;&amp;</td>
-            <td width="25%">et</td>
-            <td width="60%">(dix < 11 &amp;&amp; dix > 9)</td>
-          </tr>
-           <tr>
-            <td width="15%">||</td>
-            <td width="25%">ou</td>
-            <td width="60%">(dix == 10 || deux == 2)</td>
-          </tr>
-          <tr>
-            <td width="15%">!</td>
-            <td width="25%">pas</td>
-            <td width="60%"> !(dix == deux)</td>
-          </tr>
+          <thead>
+            <tr>
+              <th scope="col" align="left" colspan="3">Opérateurs logiques</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td width="15%">&amp;&amp;</td>
+              <td width="25%">et</td>
+              <td width="60%">(dix < 11 &amp;&amp; dix > 9)</td>
+            </tr>
+             <tr>
+              <td width="15%">||</td>
+              <td width="25%">ou</td>
+              <td width="60%">(dix == 10 || deux == 2)</td>
+            </tr>
+            <tr>
+              <td width="15%">!</td>
+              <td width="25%">pas</td>
+              <td width="60%"> !(dix == deux)</td>
+            </tr>
+          </tbody>
         </table>
 
         `var deux = 2` et `var dix = 10`
@@ -1980,8 +2002,9 @@ if ( prix <= 100 ) {
   alert(prix + "$" + "? Mais c'est trop cher!");
 }</code></pre>
 
-
-      <img onclick="siTest();" src="framework/img/workshop/rawbot-run.png" alt="">
+      <button type="button" class="btn-image" onclick="siTest();">
+        <img src="framework/img/workshop/rawbot-run.png" alt="exécuter le code">
+      </button>
 
       <script>
         function siTest(){
@@ -2005,7 +2028,7 @@ if ( prix <= 100 ) {
 
         Le compteur devrait arrêter à 0.
 
-        Ouvrez le fichier d'exercice **6-quantités-conditionnelles.html** et modifiez la fonction `enleverObjet()` pour y inclure une instruction `if` qui vérifiera les valeurs négatives.
+        Ouvrez le fichier d'exercice `6-quantités-conditionnelles.html` et modifiez la fonction `enleverObjet()` pour y inclure une instruction `if` qui vérifiera les valeurs négatives.
       </script>
     </section>
 
@@ -2029,14 +2052,14 @@ if ( prix <= 100 ) {
       <script type="text/template">
         #Exercice bonus!
 
-        Dans le même fichier d'exercice, **6-quantités-conditionnelles.html**, vérifiez le comportement du bouton **Caisse**!
+        Dans le même fichier d'exercice, `6-quantités-conditionnelles.html`, vérifiez le comportement du bouton **Caisse**!
 
         1. Quand l'utilisateur clique sur le bouton **Passer à la caisse**, vérifiez si la `quantité` est d'au moins 0.
         1. Si la `quantité` est de 0, utilisez `alert()` pour afficher le message « Vous ne pouvez pas passer à la caisse avec un panier vide. ».
         1. Si la `quantité` est d'au moins 1, utilisez `alert()` pour afficher le message « Merci d'avoir passé une commande. ».
 
         ---
-        Vous trouverez le corrigé dans le fichier **6-quantités-conditionnelles-corrigé.html** <!-- .element: class="note" -->
+        Vous trouverez le corrigé dans le fichier `6-quantités-conditionnelles-corrigé.html` <!-- .element: class="note" -->
       </script>
     </section>
 
@@ -2056,7 +2079,7 @@ if ( prix <= 100 ) {
   &lt;/body>
 &lt;/html></code></pre>
 
-      Le fichier externe doit être enregistré avec l'extension de fichier « .js ». Il n'est pas nécessaire d'ajouter les balises « <code>&lt;script></code> » à l'intérieur du fichier.
+      Le fichier externe doit être enregistré avec l'extension de fichier <code>.js</code>. Il n'est pas nécessaire d'ajouter les balises « <code>&lt;script></code> » à l'intérieur du fichier.
 
     </section>
 
